@@ -9,7 +9,7 @@
   <meta property="og:title" content="Hassan Iftikhar | AI × Circularity × Life Cycle Assessment">
   <meta property="og:description" content="Where AI meets circular impact. Research, engineering, awards and projects by Hassan Iftikhar.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261104-fix3">
   <style>
     .portrait-neural-card{display:grid;gap:12px}
     .portrait-neural-frame{height:405px;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 35%,rgba(72,156,148,.28),rgba(16,29,41,.95) 70%)}
@@ -38,8 +38,8 @@
     @media(max-width:570px){.portrait-neural-frame{height:320px}.portrait-neural-status strong{font-size:18px}.portrait-neural-badge{font-size:8px;padding:8px 10px}}
   </style>
 
-  <script defer src="assets/js/data.js"></script>
-  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/data.js?v=20261104-fix3"></script>
+  <script defer src="assets/js/main.js?v=20261104-fix3"></script>
   <script defer src="assets/js/experience.js"></script>
   <title>Hassan Iftikhar — Where AI Meets Circular Impact</title>
 
@@ -98,6 +98,41 @@
     @media(max-width:570px){.portrait-neural-status strong{font-size:22px}.portrait-neural-status span{font-size:12px;max-width:240px}.hero-desc{font-size:15px}.hero-credentials .credential{padding:17px 15px!important;min-height:160px}.hero-credentials .credential-value{font-size:33px}.hero-credentials .credential-soft{font-size:16px}.hero-credentials .credential-label{font-size:11px}.section-heading>p{font-size:13px}.project-info p,.award-card p{font-size:12px}}
     @media(prefers-reduced-motion:reduce){.credential,.metric-progress span{transition:none!important}.hero-credentials .credential:hover{transform:none!important}}
   </style>
+
+<style id="lca-fixed-layout">
+/* Dedicated, size-constrained LCA layout for dark and light theme. No SVG icons. */
+.lca-clean.impact-section{background:#101d28!important;color:#f1f6f3!important}
+.lca-clean .section-number,.lca-clean .eyebrow{color:#a0e8c3!important}
+.lca-clean .section-aside{color:#a0b8b0!important}
+.lca-clean .section-rule{background:rgba(179,237,209,.18)!important}
+.lca-clean .impact-intro h2{color:#eff9f1!important}
+.lca-clean .impact-intro h2 span{color:#b4f3c3!important}
+.lca-clean .impact-intro p:not(.eyebrow){font-size:15px;line-height:1.9;color:#c8d8d1!important}
+.lca-clean .impact-intro .text-link{color:#c6f4b4!important;border-color:#71ac85!important}
+.lca-clean .method-tags span{color:#c9e3d3!important;background:rgba(147,227,195,.09)!important;border-color:rgba(147,227,195,.17)!important}
+.lca-clean .lca-panel,.lca-clean .lca-panel *{box-sizing:border-box}
+.lca-clean .lca-panel{width:100%;min-width:0;max-width:100%;overflow:hidden;background:linear-gradient(142deg,#182b35,#10212b);border:1px solid rgba(160,227,201,.21);border-radius:14px;padding:clamp(18px,3vw,30px);color:#eef7ef;box-shadow:0 20px 50px rgba(0,0,0,.17)}
+.lca-clean .lca-kicker{display:block;color:#9beaC5;font-size:10px;font-weight:800;letter-spacing:.14em;margin-bottom:8px}
+.lca-clean .lca-heading h3{font-size:clamp(23px,2.2vw,29px);line-height:1.23;letter-spacing:-.04em;color:#f4fcf5;margin:6px 0 9px}
+.lca-clean .lca-heading>p:last-child{font-size:13px;line-height:1.75;color:#c0d0c8;margin-bottom:22px}
+.lca-clean .lca-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:22px}
+.lca-clean .energy-tab{min-width:0;max-width:100%;min-height:52px;padding:12px;background:#1b323a;border:1px solid rgba(151,223,191,.2);border-radius:8px;color:#c6d9d0;font-size:12px;font-weight:750;line-height:1.4;text-align:center;white-space:normal;transition:background .25s,border-color .25s,color .25s}
+.lca-clean .energy-tab.active{background:rgba(201,248,155,.12);color:#eeffdd;border-color:rgba(208,252,123,.65)}
+.lca-clean .energy-tab:focus-visible{outline:2px solid #d0fc7b;outline-offset:3px}
+.lca-clean .lca-flow{display:grid;grid-template-columns:minmax(0,1fr) 13px minmax(0,1fr) 13px minmax(0,1fr);align-items:center;gap:7px;margin-bottom:20px}
+.lca-clean .lca-step{min-width:0;min-height:132px;display:flex;flex-direction:column;gap:9px;background:rgba(7,18,28,.37);border:1px solid rgba(147,223,190,.16);border-radius:9px;padding:13px 11px}
+.lca-clean .lca-step>span{font-size:10px;color:#9ce8c1;letter-spacing:.1em;font-weight:800}
+.lca-clean .lca-step strong{font-size:13px;line-height:1.36;color:#f7fbf7}
+.lca-clean .lca-step small{font-size:11px;line-height:1.5;color:#b1c8bd}
+.lca-clean .lca-arrow{font-size:17px;color:#a3efc0;text-align:center}
+.lca-clean .lca-detail{border-top:1px solid rgba(166,231,203,.18);padding-top:20px}
+.lca-clean .lca-detail h4{font-size:22px;line-height:1.25;color:#f6fdf6;margin:6px 0 10px}
+.lca-clean .lca-detail p{font-size:13px;line-height:1.85;color:#c1d7cb!important;margin:0 0 14px}
+.lca-clean .lca-note{font-size:11px;line-height:1.75;color:#9bb6a9!important;border-top:1px solid rgba(155,224,197,.14);padding-top:15px;margin:0}
+.lca-clean .lca-panel[data-scenario="renewable"] .lca-step:first-child{background:rgba(130,197,120,.13);border-color:rgba(202,251,146,.5)}
+.lca-clean .lca-panel[data-scenario="renewable"] .lca-step:first-child>span{color:#d0fc7b}
+@media(max-width:680px){.lca-clean .impact-layout{grid-template-columns:1fr}.lca-clean .lca-controls{grid-template-columns:1fr}.lca-clean .lca-flow{grid-template-columns:1fr}.lca-clean .lca-step{min-height:auto}.lca-clean .lca-arrow{transform:rotate(90deg);line-height:1}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -183,41 +218,40 @@
   <div class="section-top"><span class="section-number">03 / WORK ARCHIVE</span><span class="section-rule"></span><span class="section-aside">CLICK ANY PROJECT TO EXPLORE</span></div>
   <div class="section-heading"><div><p class="eyebrow">RESEARCH × INDUSTRY × INNOVATION</p><h2 id="projects-title">Projects that <span>connect the dots.</span></h2></div><p>From denim supply-chain LCA and circular ceramics to supercapacitors, energy optimisation and computational materials science.</p></div>
   <div class="project-controls"><div class="filter-list" role="group" aria-label="Filter projects"><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter-btn" data-filter="lca" aria-pressed="false">LCA</button><button type="button" class="filter-btn" data-filter="circular" aria-pressed="false">Circular economy</button><button type="button" class="filter-btn" data-filter="materials" aria-pressed="false">Materials</button><button type="button" class="filter-btn" data-filter="energy" aria-pressed="false">Energy</button><button type="button" class="filter-btn" data-filter="digital" aria-pressed="false">AI & data</button><button type="button" class="filter-btn" data-filter="industry" aria-pressed="false">Industry</button></div><label class="search-field"><span class="search-glyph" aria-hidden="true">⌕</span><input type="search" id="project-search" placeholder="Search work..." aria-label="Search projects"></label></div>
-  <div class="projects-meta"><span id="project-count">SHOWING 15 OF 15 PROJECTS</span><span></span></div>
+  <div class="projects-meta"><span id="project-count">SHOWING 15 OF 15 PROJECTS</span><span>SELECT A PROJECT TO EXPLORE</span></div>
   <div id="project-grid" class="project-grid" aria-live="polite"></div><p class="project-empty" id="project-empty" hidden>No projects match these filters. Try another search.</p>
 </section>
 
-<section id="impact" class="section impact-section impact-decarbonisation" aria-labelledby="impact-title">
-  <div class="section-top"><span class="section-number">04 / INTERACTIVE LCA LAB</span><span class="section-rule"></span><span class="section-aside">DECARBONISATION · SCENARIO LOGIC</span></div>
+<section id="impact" class="section impact-section lca-clean" aria-labelledby="impact-title">
+  <div class="section-top"><span class="section-number">04 / LIFE CYCLE ASSESSMENT</span><span class="section-rule"></span><span class="section-aside">ELECTRICITY &amp; DECARBONISATION</span></div>
   <div class="impact-layout">
     <div class="impact-intro">
-      <p class="eyebrow">BIO-DENIM RESEARCH · PUBLIC OVERVIEW</p>
-      <h2 id="impact-title">Decarbonisation is a <span>systems question.</span></h2>
-      <p>Electricity sourcing is one of the decisions explored in my denim supply-chain life cycle assessment. Compare a conventional electricity assumption with a renewable electricity scenario to understand the research approach.</p>
-      <p>This interactive illustration explains the analytical framework, not unpublished numerical findings. It is not a product comparison or a claim of a verified reduction.</p>
-      <a href="#projects" id="jump-biodenim" class="text-link">Explore the BioDenim research project <span aria-hidden="true">↗</span></a>
-      <div class="method-tags"><span>Life Cycle Assessment</span><span>Decarbonisation</span><span>Scenario Analysis</span><span>Responsible Disclosure</span></div>
+      <p class="eyebrow">BIODENIM RESEARCH · PUBLIC OVERVIEW</p>
+      <h2 id="impact-title">Cleaner energy. <span>Better systems.</span></h2>
+      <p>In my BioDenim life cycle assessment research, I investigate how electricity sourcing and supply-chain decisions influence the environmental profile of denim production.</p>
+      <p>Select an electricity scenario to explore the research framework. This is a conceptual explanation, not a published comparison of quantitative results.</p>
+      <a href="#projects" id="jump-biodenim" class="text-link">Explore the BioDenim project <span aria-hidden="true">↗</span></a>
+      <div class="method-tags"><span>LCA</span><span>Electricity Mix</span><span>Supply Chains</span><span>Decarbonisation</span></div>
     </div>
-    <div class="impact-card energy-card" id="energy-visual" data-scenario="conventional">
-      <div class="impact-card-head"><div><p class="card-kicker">ELECTRICITY MIX · SCENARIO EXPLORER</p><h3>How power sourcing enters the system</h3></div><span class="mini-icon" aria-hidden="true">↗</span></div>
-      <div class="energy-tabs" role="group" aria-label="Compare electricity-supply assumptions">
-        <button type="button" class="energy-tab active" data-energy="conventional" aria-pressed="true"><span class="energy-indicator"></span>Conventional electricity</button>
-        <button type="button" class="energy-tab" data-energy="renewable" aria-pressed="false"><span class="energy-indicator"></span>Renewable electricity</button>
+    <div class="lca-panel" id="energy-visual" data-scenario="conventional">
+      <div class="lca-heading"><p class="lca-kicker">SCENARIO EXPLORER</p><h3>Conventional vs renewable electricity</h3><p>Different sourcing assumptions within the same life cycle assessment framework.</p></div>
+      <div class="lca-controls" role="group" aria-label="Electricity scenario">
+        <button type="button" class="energy-tab active" data-energy="conventional" aria-pressed="true">Conventional electricity</button>
+        <button type="button" class="energy-tab" data-energy="renewable" aria-pressed="false">Renewable electricity</button>
       </div>
-      <div class="energy-flow" aria-hidden="true">
-        <div class="energy-source"><svg viewBox="0 0 100 100" fill="none"><path class="grid-icon" d="M20 76L38 19H66L83 76M29 58H74M36 39H67M40 20L47 76M60 20L56 76" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path class="renewable-icon" d="M51 82V42M51 42L21 29M51 42L73 16M51 42L82 67M21 29Q15 6 38 17L51 42M73 16Q95 23 72 42L51 42M82 67Q64 92 51 42" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></svg><span>POWER SUPPLY</span></div>
-        <div class="energy-link"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="energy-source factory-source"><svg viewBox="0 0 100 100" fill="none"><path d="M12 80V36L38 52 60 36 85 52V80H12ZM13 80H89M39 81V66H57V81M65 24V48" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><rect x="65" y="12" width="11" height="35" rx="2" fill="currentColor" opacity=".4"/></svg><span>TEXTILE PROCESSING</span></div>
-        <div class="energy-link"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="energy-source"><svg viewBox="0 0 100 100" fill="none"><path d="M27 20H73L82 36L71 88H29L18 36L27 20ZM38 20L41 37M64 20L59 37M29 38H72M38 39L34 81M61 39L66 81" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></svg><span>DENIM SUPPLY CHAIN</span></div>
+      <div class="lca-flow" aria-label="Electricity supply, textile processing, and life cycle assessment">
+        <div class="lca-step"><span>01 / SOURCE</span><strong>Electricity</strong><small id="lca-source-label">Conventional supply assumption</small></div>
+        <div class="lca-arrow" aria-hidden="true">→</div>
+        <div class="lca-step"><span>02 / PROCESS</span><strong>Textile manufacturing</strong><small>Energy-related processes</small></div>
+        <div class="lca-arrow" aria-hidden="true">→</div>
+        <div class="lca-step"><span>03 / ASSESS</span><strong>LCA framework</strong><small>Consistent system boundary</small></div>
       </div>
-      <div class="energy-detail" aria-live="polite">
-        <p class="energy-overline" id="scenario-cue">BASELINE SCENARIO · ELECTRICITY SOURCING</p>
+      <div class="lca-detail" aria-live="polite">
+        <span class="lca-kicker" id="scenario-cue">BASELINE ASSUMPTION</span>
         <h4 id="scenario-title">Conventional electricity</h4>
-        <p id="scenario-description">Reference scenario: electricity supplied under the conventional sourcing assumption. The model examines how energy inputs and production geography affect the full supply chain.</p>
-        <div class="energy-chips"><span class="energy-chip">Grid electricity</span><span class="energy-chip">Manufacturing energy</span><span class="energy-chip">Supply-chain boundary</span></div>
+        <p id="scenario-description">A conventional electricity-sourcing assumption provides the reference scenario for comparing manufacturing-related environmental performance.</p>
       </div>
-      <p class="impact-note"><strong>Research disclosure:</strong> This is an illustrative scenario diagram only. Quantitative LCA results, underlying inventories and unpublished assumptions are intentionally not displayed.</p>
+      <p class="lca-note">Methodological illustration only. Unpublished model results, inventory data, and quantified reductions are not displayed.</p>
     </div>
   </div>
 </section>

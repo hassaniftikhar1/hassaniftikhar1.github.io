@@ -1,70 +1,70 @@
 /* EDIT THIS FILE to update research projects. Image slots intentionally omitted. */
 window.PORTFOLIO_PROJECTS = [
   {
-    id:'biodenim',thumbnail:'assets/images/projects/biodenim.svg',title:'BioDenim — Denim Supply-Chain Decarbonisation & LCA',year:'2026 — ongoing',context:'NOVA FCT · BioMatFab',label:'RESEARCH · FEATURED',categories:['lca','circular','energy'],tags:['Life Cycle Assessment','Decarbonisation','Renewable Electricity','Textiles'],featured:true,art:['#163d3a','#10242b','rgba(112,214,162,.36)'],
+    id:'biodenim',title:'BioDenim — Denim Supply-Chain Decarbonisation & LCA',year:'2026 — ongoing',context:'NOVA FCT · BioMatFab',label:'RESEARCH · FEATURED',categories:['lca','circular','energy'],tags:['Life Cycle Assessment','Decarbonisation','Renewable Electricity','Textiles'],featured:true,art:['#163d3a','#10242b','rgba(112,214,162,.36)'],
     short:'Life cycle assessment of denim supply-chain decarbonisation, with conventional and renewable-electricity scenarios and manufacturing geography.',
     summary:'Ongoing research using life-cycle thinking to examine electricity-supply choices and decarbonisation opportunities across global denim supply chains. Detailed model results are intentionally not published here.',
     highlights:['Developed a comparative LCA framework for supply-chain decisions, with consistent system boundaries and documented assumptions.','Investigated conventional-electricity and renewable-electricity scenario assumptions as part of industrial decarbonisation analysis.','Considered production geography, manufacturing energy use and wider sustainability trade-offs.','Communicated the public-facing research theme at the Global Cleaner Production Conference in Sitges.'],
     outcome:'Decarbonisation research in progress. Numerical results, foreground inventories and unpublished scenario details are withheld from this portfolio.'
   },
   {
-    id:'chromium',thumbnail:'assets/images/projects/chromium.svg',title:'Circular Economy of Chromium Oxide',year:'2026',context:'UPM Madrid · Saint-Gobain MUEC',label:'AWARD-WINNING TEAM',categories:['circular','materials','lca'],tags:['Construction Materials','Ceramic Glazes','Cr(III)/Cr(VI)','End-of-life'],featured:true,art:['#3e3531','#192326','rgba(222,159,107,.35)'],
+    id:'chromium',title:'Circular Economy of Chromium Oxide',year:'2026',context:'UPM Madrid · Saint-Gobain MUEC',label:'AWARD-WINNING TEAM',categories:['circular','materials','lca'],tags:['Construction Materials','Ceramic Glazes','Cr(III)/Cr(VI)','End-of-life'],featured:true,art:['#3e3531','#192326','rgba(222,159,107,.35)'],
     short:'Award-winning team investigation of chromium-containing ceramic glazes, environmental risk, reuse and end-of-life pathways for construction products.',
     summary:'An interdisciplinary UPM project connecting chromium chemistry with sustainable construction materials and circular waste-management decisions.',
     highlights:['Investigated the chemical distinctions between Cr(III) and Cr(VI), including conditions influencing oxidation, mobility and leaching.','Compared segregation, reuse, recycling, recovery and controlled disposal pathways for chromium-containing ceramic and construction/demolition waste.','Co-developed a scientific communication video and presentations; contributed to shooting, directing, editing and the interpretation of technical evidence.','Presented as part of the winning team in the Saint-Gobain MUEC Award 2026–27 at Saint-Gobain Madrid.'],
     outcome:'Team: Hassan Iftikhar, Patricia Eiman, Melika Khajehhamidi and Alberto Rosillo de Cárdenas.'
   },
   {
-    id:'terralynq',thumbnail:'assets/images/projects/terralynq.svg',title:'Terralynq — Circular Minerals Innovation Concept',year:'2025 — 2026',context:'Independent innovation · Concept stage',label:'FOUNDER · EARLY STAGE',categories:['circular','digital','materials','lca'],tags:['Mineral Waste','AI concept','LCA','Construction'],featured:true,art:['#254435','#13262a','rgba(156,218,127,.32)'],
+    id:'terralynq',title:'Terralynq — Circular Minerals Innovation Concept',year:'2025 — 2026',context:'Independent innovation · Concept stage',label:'FOUNDER · EARLY STAGE',categories:['circular','digital','materials','lca'],tags:['Mineral Waste','AI concept','LCA','Construction'],featured:true,art:['#254435','#13262a','rgba(156,218,127,.32)'],
     short:'Early-stage concept for using data-driven screening and LCA to support the valorisation of mineral tailings and construction waste.',
     summary:'An innovation concept exploring how mineral-rich residues could be evaluated as safer, more valuable feedstocks for ceramics and construction products.',
     highlights:['Outlined a proposed workflow combining mineral characterisation, waste classification, formulation screening, environmental assessment and leaching checks.','Explored potential AI-assisted decision support for comparing recycled feedstocks with virgin-material baselines.','Scoped applications in ceramics and circular construction products.'],
     outcome:'Concept/proof-of-concept stage. AI functionality and industrial material validation are planned, not represented as completed deployments.'
   },
   {
-    id:'battery-recovery',thumbnail:'assets/images/projects/battery-recovery.svg',title:'Electrochemical Selectivity for Critical-Metal Recovery',year:'2026',context:'UPM Madrid · Urban Mining',label:'ACADEMIC RESEARCH',categories:['circular','materials'],tags:['Li-ion Batteries','Hydrometallurgy','Critical Metals','Urban Mining'],art:['#2b3d52','#15232f','rgba(121,178,229,.34)'],
+    id:'battery-recovery',title:'Electrochemical Selectivity for Critical-Metal Recovery',year:'2026',context:'UPM Madrid · Urban Mining',label:'ACADEMIC RESEARCH',categories:['circular','materials'],tags:['Li-ion Batteries','Hydrometallurgy','Critical Metals','Urban Mining'],art:['#2b3d52','#15232f','rgba(121,178,229,.34)'],
     short:'Technical assessment of selective metal recovery from spent lithium-ion battery leachates and the separation challenges within circular battery value chains.',
     summary:'An urban-mining research topic focused on the electrochemical selectivity challenges involved in recovering critical materials from spent lithium-ion batteries.',
     highlights:['Reviewed competing metal-recovery reactions, process selectivity and electrolyte chemistry.','Examined how electrochemical separation concepts might complement battery recycling routes.','Connected separation efficiency to circularity, material value and sustainability considerations.'],
     outcome:'Literature-based academic project; not presented as a commissioned industrial recovery process.'
   },
   {
-    id:'industrial-energy',thumbnail:'assets/images/projects/industrial-energy.svg',title:'Industrial Energy Efficiency — Technology Comparison',year:'2026',context:'UPM Madrid · Energy Efficiency',label:'APPLIED ANALYSIS',categories:['energy','digital','lca'],tags:['Heat Pumps','Solar Thermal','ROI','Energy Balances'],art:['#493b28','#292522','rgba(239,194,96,.28)'],
+    id:'industrial-energy',title:'Industrial Energy Efficiency — Technology Comparison',year:'2026',context:'UPM Madrid · Energy Efficiency',label:'APPLIED ANALYSIS',categories:['energy','digital','lca'],tags:['Heat Pumps','Solar Thermal','ROI','Energy Balances'],art:['#493b28','#292522','rgba(239,194,96,.28)'],
     short:'Techno-economic comparison of efficient gas heating, an industrial heat pump and solar thermal alternatives for a representative manufacturing facility.',
     summary:'A quantified engineering comparison of alternatives for industrial thermal-energy supply, linking heat demand with efficiency, investment and financial performance.',
     highlights:['Developed heat-demand assumptions, annual energy balances and technology-sizing scenarios.','Compared high-efficiency gas heat, heat-pump operation and solar thermal contribution.','Evaluated COP, capital investment, operating costs, return on investment and simple payback.'],
     outcome:'Academic scenario analysis for industrial energy decision-making.'
   },
   {
-    id:'photovoltaic',thumbnail:'assets/images/projects/photovoltaic.svg',title:'Industrial Rooftop Solar PV — Generation Assessment',year:'2026',context:'UPM Madrid · Applied energy project',label:'ENGINEERING STUDY',categories:['energy','digital'],tags:['Solar PV','System Sizing','Energy Yield','Electricity'],art:['#404b35','#19282c','rgba(199,215,115,.28)'],
+    id:'photovoltaic',title:'Industrial Rooftop Solar PV — Generation Assessment',year:'2026',context:'UPM Madrid · Applied energy project',label:'ENGINEERING STUDY',categories:['energy','digital'],tags:['Solar PV','System Sizing','Energy Yield','Electricity'],art:['#404b35','#19282c','rgba(199,215,115,.28)'],
     short:'Designed and assessed a 23.79 kWp industrial rooftop PV concept with estimated annual generation of 36.78 MWh under academic assumptions.',
     summary:'A location-specific photovoltaic sizing and generation analysis for a representative industrial facility in Rahim Yar Khan.',
     highlights:['Assessed a nominal 23.79 kWp system using 39 × 610 W PV modules and a 20 kW inverter.','Estimated annual output of 36.78 MWh using an assumed specific yield of 1,546 kWh/kWp/year.','Considered string/inverter matching and annual electricity generation relative to site demand.'],
     outcome:'Academic feasibility estimate, not an installed or independently metered plant.'
   },
   {
-    id:'waste-trends',thumbnail:'assets/images/projects/waste-trends.svg',title:'European Waste Treatment & Circularity Trends',year:'2026',context:'UPM Madrid · Circular economy',label:'DATA ANALYSIS',categories:['circular','digital','lca'],tags:['Eurostat','Waste Management','Recycling','Comparative Data'],art:['#2c4950','#132c32','rgba(110,206,212,.3)'],
+    id:'waste-trends',title:'European Waste Treatment & Circularity Trends',year:'2026',context:'UPM Madrid · Circular economy',label:'DATA ANALYSIS',categories:['circular','digital','lca'],tags:['Eurostat','Waste Management','Recycling','Comparative Data'],art:['#2c4950','#132c32','rgba(110,206,212,.3)'],
     short:'Cross-country comparison of municipal waste treatment pathways, recycling trends and landfill reduction using Eurostat datasets.',
     summary:'A data-led comparison of changing waste-management pathways in Spain, France, Portugal and Switzerland, benchmarked against EU-27 figures.',
     highlights:['Organised multi-year Eurostat indicators on landfill, waste-to-energy, material recycling and biological treatment.','Explored differences in national treatment mixes and progress toward circular waste-management systems.','Translated statistical trends into comparative graphics and an evidence-based interpretation.'],
     outcome:'Academic analysis of publicly available data; country comparisons depend on consistent statistical definitions.'
   },
   {
-    id:'cellulose',thumbnail:'assets/images/projects/cellulose.svg',title:'Cellulose Nanocrystals — Surface Chemistry & Dispersion',year:'2024',context:'CERMAV / CNRS · Grenoble',label:'RESEARCH INTERNSHIP',categories:['materials'],tags:['Cellulose Nanocrystals','TEMPO Oxidation','Interfaces','Colloids'],art:['#345049','#1a2a2d','rgba(146,221,195,.3)'],
+    id:'cellulose',title:'Cellulose Nanocrystals — Surface Chemistry & Dispersion',year:'2024',context:'CERMAV / CNRS · Grenoble',label:'RESEARCH INTERNSHIP',categories:['materials'],tags:['Cellulose Nanocrystals','TEMPO Oxidation','Interfaces','Colloids'],art:['#345049','#1a2a2d','rgba(146,221,195,.3)'],
     short:'Experimental investigation of cellulose nanocrystal modification and dispersion in nonpolar media through interface chemistry.',
     summary:'Research into the colloidal stability and surface modification of cellulose nanocrystals as sustainable material building blocks.',
     highlights:['Explored surfactant selection and surface chemistry to improve dispersion in apolar solvents.','Investigated TEMPO-mediated oxidation routes and related changes in nanocellulose interface behaviour.','Documented experiments, relevant characterisation and structure–property reasoning.'],
     outcome:'Completed research internship at CERMAV/CNRS in Grenoble.'
   },
   {
-    id:'supercapacitors',thumbnail:'assets/images/projects/supercapacitors.svg',title:'Ni–Co–Mn MOF / MXene / CNT Energy-Storage Materials',year:'2021 — 2022',context:'GIKI · Undergraduate research',label:'FIRST-PLACE PROJECT',categories:['materials','energy'],tags:['MOF','MXene','CNT','Supercapacitors','Electrochemistry'],art:['#47354a','#231b2c','rgba(208,140,220,.28)'],
+    id:'supercapacitors',title:'Ni–Co–Mn MOF / MXene / CNT Energy-Storage Materials',year:'2021 — 2022',context:'GIKI · Undergraduate research',label:'FIRST-PLACE PROJECT',categories:['materials','energy'],tags:['MOF','MXene','CNT','Supercapacitors','Electrochemistry'],art:['#47354a','#231b2c','rgba(208,140,220,.28)'],
     short:'Synthesised and evaluated hybrid nanocomposites for electrochemical energy-storage applications; project recognised at GIKI Open House.',
     summary:'Undergraduate materials research into Ni–Co–Mn metal–organic framework composites incorporating MXenes and carbon nanotubes.',
     highlights:['Prepared nanomaterials via hydrothermal/solvothermal synthesis routes.','Characterised electrode performance using cyclic voltammetry, galvanostatic charge–discharge and impedance spectroscopy.','Related electrochemical response to constituent materials and morphology.','Undergraduate project received first-place recognition at GIKI Open House / Industrial Expo.'],
     outcome:'The undergraduate project reported a charge-storage result of approximately 1,400 C/g under its stated experimental conditions.'
   },
   {
-    id:'manufacturing',thumbnail:'assets/images/projects/manufacturing.svg',title:'AkzoNobel — Continuous Improvement & Quality Systems',year:'2022 — 2024',context:'AkzoNobel · Lahore',label:'INDUSTRIAL EXPERIENCE',categories:['industry','digital'],tags:['Lean Six Sigma','DMAIC','Quality','Power BI','SAP'],art:['#2b4253','#17252d','rgba(118,181,205,.28)'],
+    id:'manufacturing',title:'AkzoNobel — Continuous Improvement & Quality Systems',year:'2022 — 2024',context:'AkzoNobel · Lahore',label:'INDUSTRIAL EXPERIENCE',categories:['industry','digital'],tags:['Lean Six Sigma','DMAIC','Quality','Power BI','SAP'],art:['#2b4253','#17252d','rgba(118,181,205,.28)'],
     short:'Manufacturing-quality data, process performance, SOP and Lean Six Sigma work in industrial coatings operations.',
     summary:'Cross-functional industrial projects supporting manufacturing performance, continuous improvement and quality-system documentation.',
     highlights:['Analysed process and quality metrics with Excel, Power BI and SAP ECC.','Supported DMAIC-related work associated with improvements in Right-First-Time performance and batch/milling cycle time.','Contributed to laboratory SOPs, quality documentation, audit preparation and corrective-action follow-up.','Worked with production, maintenance, HSE and quality colleagues on operating constraints and plant activities.'],

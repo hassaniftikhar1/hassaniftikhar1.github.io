@@ -41,13 +41,11 @@
   function makeEl(tag,className,text){const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;}
   function card(project,index){
     const button=makeEl('button','project-card');button.type='button';button.setAttribute('aria-label',`Explore ${project.title}`);button.addEventListener('click',()=>openModal(project,index));
-    const art=makeEl('div','project-art');art.style.setProperty('--art-top',project.art[0]);art.style.setProperty('--art-bottom',project.art[1]);art.style.setProperty('--art-glow',project.art[2]);
-    if(project.thumbnail){
-      art.classList.add('has-thumbnail');
-      const img=makeEl('img','project-thumbnail');img.src=project.thumbnail;img.alt='';img.loading='lazy';img.decoding='async';
-      art.append(img);
-    }else art.append(makeEl('span','project-art-index',String(index+1).padStart(2,'0')));
-    art.append(makeEl('span','project-badge',project.label),makeEl('span','project-visual-label','RESEARCH / ENGINEERING'));
+    const art=makeEl('div','project-art');
+    art.style.setProperty('--art-top',project.art[0]);
+    art.style.setProperty('--art-bottom',project.art[1]);
+    art.style.setProperty('--art-glow',project.art[2]);
+    art.append(makeEl('span','project-art-index',String(index+1).padStart(2,'0')),makeEl('span','project-badge',project.label),makeEl('span','project-visual-label','RESEARCH / ENGINEERING'));
     const info=makeEl('div','project-info'),meta=makeEl('div','project-meta');meta.append(makeEl('span','',project.year),makeEl('span','',project.context));
     const title=makeEl('h3','',project.title),desc=makeEl('p','',project.short),bottom=makeEl('div','project-bottom');bottom.append(makeEl('span','',project.tags.slice(0,3).join(' · ')),makeEl('span','','↗'));
     info.append(meta,title,desc,bottom);button.append(art,info);return button;
@@ -71,31 +69,21 @@
   closeDialog.addEventListener('click',dismissModal);dialog.addEventListener('click',event=>{if(event.target===dialog)dismissModal();});dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');if(previousFocus?.isConnected)previousFocus.focus();});
   $('#jump-biodenim').addEventListener('click',()=>{state.category='all';state.search='biodenim';$('#project-search').value='biodenim';$$('.filter-btn').forEach(b=>{const selected=b.dataset.filter==='all';b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));});renderProjects();});
 
-  // Public-facing scenario explainer. No confidential LCA results or numerical comparisons.
-  const scenarioDetails={
-    conventional:{
-      title:'Conventional electricity',
-      text:'Reference scenario: electricity supplied under the conventional sourcing assumption. The model examines how energy inputs and production geography affect the full supply chain.',
-      cue:'BASELINE SCENARIO · ELECTRICITY SOURCING',
-      chips:['Grid electricity','Manufacturing energy','Supply-chain boundary']
-    },
-    renewable:{
-      title:'Renewable electricity',
-      text:'Decarbonisation scenario: substitute the electricity-source assumption while maintaining a consistent comparison boundary. Quantified findings remain private pending research disclosure.',
-      cue:'DECARBONISATION SCENARIO · RENEWABLE SOURCING',
-      chips:['Renewable sourcing','Sensitivity analysis','Consistent comparison']
-    }
+  // Public education-only scenario explorer. No confidential results.
+  const energyScenarios={
+    conventional:{title:'Conventional electricity',cue:'BASELINE ASSUMPTION',source:'Conventional supply assumption',description:'A conventional electricity-sourcing assumption provides the reference scenario for comparing manufacturing-related environmental performance.'},
+    renewable:{title:'Renewable electricity',cue:'RENEWABLE SOURCING ASSUMPTION',source:'Renewable supply assumption',description:'The renewable sourcing scenario explores a change in electricity supply while maintaining the same LCA framework. Quantitative findings remain unpublished.'}
   };
   function setEnergyScenario(key){
-    const scenario=scenarioDetails[key];if(!scenario)return;
-    const visual=$('#energy-visual'),title=$('#scenario-title'),body=$('#scenario-description'),cue=$('#scenario-cue');
-    if(!visual||!title||!body||!cue)return;
-    visual.dataset.scenario=key;
-    title.textContent=scenario.title;body.textContent=scenario.text;cue.textContent=scenario.cue;
-    $$('.energy-tab').forEach(tab=>{const selected=tab.dataset.energy===key;tab.classList.toggle('active',selected);tab.setAttribute('aria-pressed',String(selected));});
-    $$('.energy-chip').forEach((chip,i)=>{chip.textContent=scenario.chips[i]||'';});
+    const v=energyScenarios[key],panel=$('#energy-visual');if(!v||!panel)return;
+    panel.dataset.scenario=key;
+    $('#scenario-title').textContent=v.title;
+    $('#scenario-cue').textContent=v.cue;
+    $('#scenario-description').textContent=v.description;
+    $('#lca-source-label').textContent=v.source;
+    $$('.energy-tab').forEach(button=>{let selected=button.dataset.energy===key;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));});
   }
-  $$('.energy-tab').forEach(tab=>tab.addEventListener('click',()=>setEnergyScenario(tab.dataset.energy)));
+  $$('.energy-tab').forEach(button=>button.addEventListener('click',()=>setEnergyScenario(button.dataset.energy)));
   setEnergyScenario('conventional');
 
   // Toast + copy email (works on HTTPS and modern localhost browsers).

@@ -61,53 +61,8 @@
 }
 
 
-/* Illustrated project-card system: consistent artwork, no external image requests. */
-.project-art.has-thumbnail{height:200px;background:#0a1e2a;isolation:isolate}
-.project-art.has-thumbnail:before{display:none}
-.project-art.has-thumbnail:after{content:'';display:block;position:absolute;inset:42% 0 0;z-index:1;width:auto;height:auto;border:0;border-radius:0;box-shadow:none;background:linear-gradient(0deg,rgba(7,19,29,.78),transparent);pointer-events:none}
-.project-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.2,.65,.2,1),filter .5s;filter:saturate(.95)}
-.project-card:hover .project-thumbnail,.project-card:focus-visible .project-thumbnail{transform:scale(1.07);filter:saturate(1.12)}
-.project-art.has-thumbnail .project-badge,.project-art.has-thumbnail .project-visual-label{z-index:4}
-.project-art.has-thumbnail .project-visual-label{color:#c7eadf;text-shadow:0 2px 5px #0a1b22}
+
+/* Original abstract numbered project cards */
 .project-info p{font-size:13px;line-height:1.85}
 .project-meta{font-size:10px}
 .project-bottom{font-size:11px}
-/* BioDenim public decarbonisation explorer: no proprietary numerical outputs. */
-.impact-decarbonisation{background:linear-gradient(165deg,#0b1923,#0e2227 52%,#0b1924)!important}
-.impact-decarbonisation .section-top{color:#bbd7cf}
-.impact-decarbonisation .impact-intro h2{color:#f1f8f2!important}
-.impact-decarbonisation .impact-intro p:not(.eyebrow){color:#b6c8c5!important;font-size:15px;line-height:1.9}
-.impact-decarbonisation .method-tags span{border-color:rgba(177,235,210,.19)!important;background:rgba(137,231,204,.08)!important;color:#badace!important}
-.impact-decarbonisation .energy-card{background:radial-gradient(circle at 80% 0,rgba(87,191,170,.12),transparent 40%),#101f2a;color:#e9f4ef;border:1px solid rgba(151,231,208,.22);border-radius:16px;padding:28px;box-shadow:0 22px 68px rgba(0,0,0,.18)}
-.energy-card .card-kicker{color:#93eac6!important}
-.energy-card h3{color:#eef8f2!important;font-size:23px;line-height:1.25;margin:7px 0 22px}
-.energy-card .mini-icon{color:#b6f5ac}
-.energy-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:7px 0 28px}
-.energy-tab{display:flex;align-items:center;justify-content:center;gap:9px;min-height:53px;padding:10px 9px;background:#172c34;color:#acc9c2;border:1px solid rgba(155,225,204,.16);border-radius:9px;font-size:12px;font-weight:750;line-height:1.4;transition:color .25s,border-color .25s,background .25s,box-shadow .25s}
-.energy-tab.active{background:rgba(137,221,171,.13);border-color:rgba(202,250,145,.58);box-shadow:0 0 0 1px rgba(202,250,145,.07) inset;color:#e8ffc5}
-.energy-indicator{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 12px currentColor;flex:none}
-.energy-flow{display:flex;align-items:center;justify-content:center;gap:5px;padding:20px 7px 22px;border:1px solid rgba(125,213,192,.13);border-radius:12px;background:radial-gradient(circle at 50% 50%,rgba(89,178,174,.09),transparent 68%),linear-gradient(rgba(133,209,192,.018) 1px,transparent 1px);background-size:auto,28px 28px}
-.energy-source{display:flex;flex-direction:column;align-items:center;gap:12px;width:29%;color:#83c6b9;text-align:center}
-.energy-source svg{width:85px;height:85px;max-width:100%;color:currentColor;filter:drop-shadow(0 0 8px rgba(103,217,179,.12));transition:filter .5s,color .5s,transform .5s}
-.energy-source span{font-size:8px;letter-spacing:.08em;font-weight:800;line-height:1.5;color:#a6c5bd}
-.energy-link{display:flex;align-items:center;justify-content:center;gap:5px;flex:1;min-width:18px}
-.energy-link i{display:block;width:4px;height:4px;background:#64bea7;opacity:.55;border-radius:50%;animation:energyPulse 1.9s ease-in-out infinite alternate}
-.energy-link i:nth-child(2){animation-delay:.2s}.energy-link i:nth-child(3){animation-delay:.4s}.energy-link i:nth-child(4){animation-delay:.6s}.energy-link i:nth-child(5){animation-delay:.8s}
-.energy-card .renewable-icon{opacity:0;transition:opacity .5s}
-.energy-card .grid-icon{opacity:1;transition:opacity .5s}
-.energy-card[data-scenario="renewable"] .grid-icon{opacity:0}
-.energy-card[data-scenario="renewable"] .renewable-icon{opacity:1}
-.energy-card[data-scenario="renewable"] .energy-source{color:#d0fa97}
-.energy-card[data-scenario="renewable"] .energy-link i{background:#ccff99;opacity:1}
-.energy-card[data-scenario="renewable"] .energy-source svg{filter:drop-shadow(0 0 13px rgba(208,252,123,.23))}
-.energy-detail{padding:20px 6px 8px}
-.energy-overline{font-size:10px;letter-spacing:.12em;color:#91e4c4!important;font-weight:800;margin-bottom:9px}
-.energy-detail h4{font-size:24px;line-height:1.2;color:#f5f9f4;margin:0 0 10px;letter-spacing:-.04em}
-.energy-detail>p:not(.energy-overline){font-size:13px;line-height:1.85;color:#c0d1ce;margin-bottom:14px}
-.energy-chips{display:flex;flex-wrap:wrap;gap:7px}
-.energy-chip{padding:6px 9px;font-size:9px;letter-spacing:.03em;font-weight:750;color:#c3e4db;background:rgba(98,184,160,.10);border:1px solid rgba(147,216,191,.17);border-radius:999px}
-.energy-card .impact-note{font-size:11px;line-height:1.9;color:#99b3ae;border-top:1px solid rgba(155,221,205,.13);padding-top:16px;margin:13px 0 0}
-.energy-card .impact-note strong{color:#c8e9d7}
-@keyframes energyPulse{to{opacity:1;transform:scale(1.6)}}
-@media(max-width:570px){.energy-card{padding:18px!important}.energy-tab{font-size:11px}.energy-source svg{width:60px;height:60px}.energy-source span{font-size:7px}.energy-link{gap:3px}.project-art.has-thumbnail{height:195px}.energy-detail h4{font-size:21px}}
-@media(prefers-reduced-motion:reduce){.energy-link i{animation:none}.project-thumbnail{transition:none}}
