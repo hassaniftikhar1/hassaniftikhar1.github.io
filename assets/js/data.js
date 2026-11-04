@@ -1,4 +1,4 @@
-/* Project catalogue. First ten have custom illustrated thumbnails; remaining five retain abstract art. */
+/* Project catalogue. All 15 projects have consistent custom scientific illustrations. */
 window.PORTFOLIO_PROJECTS = [
   {
     id:'biodenim',thumbnail:'assets/images/projects/biodenim.svg',title:'BioDenim — Denim Supply-Chain Decarbonisation & LCA',year:'2026 — ongoing',context:'NOVA FCT · BioMatFab',label:'RESEARCH · FEATURED',categories:['lca','circular','energy'],tags:['Life Cycle Assessment','Decarbonisation','Renewable Electricity','Textiles'],featured:true,art:['#163d3a','#10242b','rgba(112,214,162,.36)'],
@@ -71,35 +71,35 @@ window.PORTFOLIO_PROJECTS = [
     outcome:'Career-based operational improvement work; metrics and process details are presented at summary level.'
   },
   {
-    id:'finite-element',title:'Thermal Finite-Element Modelling of Materials',year:'2025',context:'Grenoble INP · Numerical methods',label:'COMPUTATIONAL STUDY',categories:['digital','materials'],tags:['FEM','Galerkin Method','Heat Transfer','Simulation'],art:['#39414f','#1b2935','rgba(134,175,220,.24)'],
+    id:'finite-element',thumbnail:'assets/images/projects/finite-element.svg',title:'Thermal Finite-Element Modelling of Materials',year:'2025',context:'Grenoble INP · Numerical methods',label:'COMPUTATIONAL STUDY',categories:['digital','materials'],tags:['FEM','Galerkin Method','Heat Transfer','Simulation'],art:['#39414f','#1b2935','rgba(134,175,220,.24)'],
     short:'Finite-element simulation of heat transfer with weak-form formulation, temperature fields and radiative boundary conditions.',
     summary:'Numerical exploration of induction-heated materials and thermal response under differing geometries and conditions.',
     highlights:['Formulated heat-transfer models using finite-element/weak-form reasoning.','Examined temperature distributions under conduction and radiative boundary effects.','Compared numerical temperature fields for selected materials or crucible configurations.'],
     outcome:'Academic computational modelling project.'
   },
   {
-    id:'ising',title:'2D Ising Model — Monte Carlo Simulation',year:'2025',context:'Grenoble INP · Scientific computing',label:'COMPUTATIONAL STUDY',categories:['digital','materials'],tags:['Python','Metropolis Sampling','Statistical Mechanics','Monte Carlo'],art:['#37444c','#1a232a','rgba(142,193,198,.28)'],
+    id:'ising',thumbnail:'assets/images/projects/ising.svg',title:'2D Ising Model — Monte Carlo Simulation',year:'2025',context:'Grenoble INP · Scientific computing',label:'COMPUTATIONAL STUDY',categories:['digital','materials'],tags:['Python','Metropolis Sampling','Statistical Mechanics','Monte Carlo'],art:['#37444c','#1a232a','rgba(142,193,198,.28)'],
     short:'Python-based Monte Carlo study of temperature-dependent phase transitions, magnetisation, energy and susceptibility.',
     summary:'An implementation of the two-dimensional Ising model to explore phase transitions using statistical mechanical simulation.',
     highlights:['Used Metropolis sampling to simulate evolving spin configurations over temperature ranges.','Analysed energy, magnetisation and susceptibility trends.','Connected simulated observations to expected phase-transition behaviour.'],
     outcome:'Academic scientific-computing project.'
   },
   {
-    id:'zno',title:'Al-Doped ZnO Thin Films for Solar Cells',year:'2021',context:'GIKI · Materials research',label:'MATERIALS STUDY',categories:['materials','energy'],tags:['Thin Films','ZnO','Doping','Solar Materials'],art:['#46503c','#222c27','rgba(192,222,153,.27)'],
+    id:'zno',thumbnail:'assets/images/projects/zno.svg',title:'Al-Doped ZnO Thin Films for Solar Cells',year:'2021',context:'GIKI · Materials research',label:'MATERIALS STUDY',categories:['materials','energy'],tags:['Thin Films','ZnO','Doping','Solar Materials'],art:['#46503c','#222c27','rgba(192,222,153,.27)'],
     short:'Investigation of aluminum doping and hybrid deposition routes for ZnO films with potential photovoltaic applications.',
     summary:'Materials project investigating the processing and quality of aluminum-doped zinc oxide films for solar-energy applications.',
     highlights:['Explored hybrid sputtering and wet-chemical deposition approaches.','Studied process conditions and doping-related changes in thin-film quality.','Interpreted material processing in the context of solar-cell applications.'],
     outcome:'Academic materials research project.'
   },
   {
-    id:'monel',title:'Corrosion Behaviour of Monel-400 Coatings',year:'2021',context:'GIKI · Surface engineering',label:'MATERIALS STUDY',categories:['materials','industry'],tags:['Coatings','Corrosion','SEM/EDS','EIS','Tafel'],art:['#484138','#272522','rgba(206,179,134,.27)'],
+    id:'monel',thumbnail:'assets/images/projects/monel.svg',title:'Corrosion Behaviour of Monel-400 Coatings',year:'2021',context:'GIKI · Surface engineering',label:'MATERIALS STUDY',categories:['materials','industry'],tags:['Coatings','Corrosion','SEM/EDS','EIS','Tafel'],art:['#484138','#272522','rgba(206,179,134,.27)'],
     short:'Characterisation of heat-treated, wire-arc-sprayed Monel-400 coatings and their corrosion response.',
     summary:'Experimental study linking surface processing and heat treatment with the corrosion behaviour of metallic coatings.',
     highlights:['Investigated wire-arc-sprayed Monel-400 coating systems on stainless-steel substrates.','Considered heat-treatment effects and surface/microstructure observations.','Used approaches including SEM/EDS, electrochemical impedance and Tafel analysis.'],
     outcome:'Academic surface-engineering project.'
   },
   {
-    id:'ceramics-video',title:'Green Ceramic Glazes — Science Communication Film',year:'2026',context:'UPM Madrid · Group 2',label:'SCIENCE COMMUNICATION',categories:['circular','materials'],tags:['Science Communication','Cr(III)/Cr(VI)','Film','Circularity'],art:['#494339','#28292b','rgba(209,190,126,.28)'],
+    id:'ceramics-video',thumbnail:'assets/images/projects/ceramics-video.svg',title:'Green Ceramic Glazes — Science Communication Film',year:'2026',context:'UPM Madrid · Group 2',label:'SCIENCE COMMUNICATION',categories:['circular','materials'],tags:['Science Communication','Cr(III)/Cr(VI)','Film','Circularity'],art:['#494339','#28292b','rgba(209,190,126,.28)'],
     short:'Directed, filmed and edited an explanatory video on chromium-bearing ceramic glazes and circular end-of-life management.',
     summary:'A science communication component of the UPM chromium-oxide circular economy project, designed to make technical information understandable without overstating environmental risks.',
     highlights:['Contributed scientific interpretation around chromium chemistry and end-of-life ceramic waste pathways.','Shot and directed footage, coordinated visual composition and handled editing, transitions and post-production.','Collaborated with Patricia, Melika and Alberto on the on-camera presentation and technical narrative.'],
