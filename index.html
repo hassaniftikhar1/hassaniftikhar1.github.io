@@ -44,13 +44,12 @@
   <title>Hassan Iftikhar — Where AI Meets Circular Impact</title>
 
   <style id="portfolio-refinement-2026">
-    /* Clean portrait: the photo remains visible except where the pointer dissolves pixels. */
+    /* Portrait expands into true image-sampled pixel fragments on hover, then reassembles. */
     .portrait-neural-frame{--neural-x:50%;--neural-y:50%}
-    .portrait-neural-frame.active img{
-      opacity:1;transform:none;filter:saturate(1.04) contrast(1.03);
-      -webkit-mask-image:radial-gradient(circle 95px at var(--neural-x) var(--neural-y),transparent 0%,rgba(0,0,0,.28) 43%,#000 100%);
-      mask-image:radial-gradient(circle 95px at var(--neural-x) var(--neural-y),transparent 0%,rgba(0,0,0,.28) 43%,#000 100%);
-    }
+    .portrait-neural-frame.active img{opacity:.22;transform:scale(1.012);filter:saturate(1.1) contrast(1.06);-webkit-mask-image:none;mask-image:none}
+    .portrait-neural-frame #headshot-neural-canvas{opacity:0;transition:opacity .38s ease}
+    .portrait-neural-frame.active #headshot-neural-canvas{opacity:1}
+    .portrait-neural-status{padding:28px 12px 3px;background:linear-gradient(0deg,rgba(4,13,22,.8),rgba(4,13,22,0));border-radius:10px}
     .portrait-neural-overlay{padding:18px 20px 22px}
     .portrait-neural-labels{justify-content:flex-start}
     .portrait-neural-chip{font-size:10px;letter-spacing:.12em}
@@ -184,20 +183,43 @@
   <div class="section-top"><span class="section-number">03 / WORK ARCHIVE</span><span class="section-rule"></span><span class="section-aside">CLICK ANY PROJECT TO EXPLORE</span></div>
   <div class="section-heading"><div><p class="eyebrow">RESEARCH × INDUSTRY × INNOVATION</p><h2 id="projects-title">Projects that <span>connect the dots.</span></h2></div><p>From denim supply-chain LCA and circular ceramics to supercapacitors, energy optimisation and computational materials science.</p></div>
   <div class="project-controls"><div class="filter-list" role="group" aria-label="Filter projects"><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter-btn" data-filter="lca" aria-pressed="false">LCA</button><button type="button" class="filter-btn" data-filter="circular" aria-pressed="false">Circular economy</button><button type="button" class="filter-btn" data-filter="materials" aria-pressed="false">Materials</button><button type="button" class="filter-btn" data-filter="energy" aria-pressed="false">Energy</button><button type="button" class="filter-btn" data-filter="digital" aria-pressed="false">AI & data</button><button type="button" class="filter-btn" data-filter="industry" aria-pressed="false">Industry</button></div><label class="search-field"><span class="search-glyph" aria-hidden="true">⌕</span><input type="search" id="project-search" placeholder="Search work..." aria-label="Search projects"></label></div>
-  <div class="projects-meta"><span id="project-count">SHOWING 15 OF 15 PROJECTS</span><span>VISUALS ARE ARTISTIC PLACEHOLDERS — IMAGES COMING LATER</span></div>
+  <div class="projects-meta"><span id="project-count">SHOWING 15 OF 15 PROJECTS</span><span>CUSTOM PROJECT ILLUSTRATIONS · FIRST 10 RESEARCH THEMES</span></div>
   <div id="project-grid" class="project-grid" aria-live="polite"></div><p class="project-empty" id="project-empty" hidden>No projects match these filters. Try another search.</p>
 </section>
 
-<section id="impact" class="section impact-section" aria-labelledby="impact-title">
-  <div class="section-top"><span class="section-number">04 / INTERACTIVE LCA LAB</span><span class="section-rule"></span><span class="section-aside">REAL MODELS · TRANSPARENT BOUNDARIES</span></div>
-  <div class="impact-layout"><div class="impact-intro"><p class="eyebrow">THE SCIENCE OF BETTER DECISIONS</p><h2 id="impact-title">Impact is more than a <span>buzzword.</span></h2><p>Explore a snapshot of my BioDenim research. Switch the system boundary to see how modelled climate impacts change for alternative denim pathways with assembly in Portugal.</p><p>The values are scenario-specific LCA outputs, not certified product claims. Results depend on defined boundaries, datasets, supply-chain geography and inventory assumptions.</p><a href="#projects" id="jump-biodenim" class="text-link">See BioDenim in my projects <span aria-hidden="true">↗</span></a><div class="method-tags"><span>ISO 14040/14044</span><span>openLCA</span><span>ecoinvent 3.12</span><span>ReCiPe 2016</span></div></div>
-    <div class="impact-card"><div class="impact-card-head"><div><p class="card-kicker">BIO-DERIVED VS CONVENTIONAL PATHWAY</p><h3>Climate impact per pair of jeans</h3></div><span class="mini-icon" aria-hidden="true">↗</span></div>
-      <div class="metric-switch" role="group" aria-label="Select system boundary"><button type="button" class="metric-btn active" data-boundary="fabric" aria-pressed="true">Fabric + PT assembly</button><button type="button" class="metric-btn" data-boundary="full" aria-pressed="false">Full product · PT assembly</button></div>
-      <div class="bar-row"><div class="bar-copy"><strong>BioDenim pathway</strong><span id="bio-value">8.61 kg CO₂-eq</span></div><div class="bar-track"><div id="bio-bar" class="bar-fill bar-bio" style="width:68.9%"></div></div></div>
-      <div class="bar-row"><div class="bar-copy"><strong>Conventional comparator</strong><span id="conventional-value">11.25 kg CO₂-eq</span></div><div class="bar-track"><div id="conventional-bar" class="bar-fill bar-conventional" style="width:90%"></div></div></div>
-      <div class="impact-result"><span>RELATIVE CLIMATE IMPACT REDUCTION IN THIS SCENARIO</span><strong id="difference-value">23.5% lower</strong></div>
-      <p class="impact-note">Functional unit: one pair of jeans at the company gate. Same geographical assembly setting; change only the displayed system-boundary definition. Figures are research model outputs and require project context for interpretation.</p>
-    </div></div>
+<section id="impact" class="section impact-section impact-decarbonisation" aria-labelledby="impact-title">
+  <div class="section-top"><span class="section-number">04 / INTERACTIVE LCA LAB</span><span class="section-rule"></span><span class="section-aside">DECARBONISATION · SCENARIO LOGIC</span></div>
+  <div class="impact-layout">
+    <div class="impact-intro">
+      <p class="eyebrow">BIO-DENIM RESEARCH · PUBLIC OVERVIEW</p>
+      <h2 id="impact-title">Decarbonisation is a <span>systems question.</span></h2>
+      <p>Electricity sourcing is one of the decisions explored in my denim supply-chain life cycle assessment. Compare a conventional electricity assumption with a renewable electricity scenario to understand the research approach.</p>
+      <p>This interactive illustration explains the analytical framework, not unpublished numerical findings. It is not a product comparison or a claim of a verified reduction.</p>
+      <a href="#projects" id="jump-biodenim" class="text-link">Explore the BioDenim research project <span aria-hidden="true">↗</span></a>
+      <div class="method-tags"><span>Life Cycle Assessment</span><span>Decarbonisation</span><span>Scenario Analysis</span><span>Responsible Disclosure</span></div>
+    </div>
+    <div class="impact-card energy-card" id="energy-visual" data-scenario="conventional">
+      <div class="impact-card-head"><div><p class="card-kicker">ELECTRICITY MIX · SCENARIO EXPLORER</p><h3>How power sourcing enters the system</h3></div><span class="mini-icon" aria-hidden="true">↗</span></div>
+      <div class="energy-tabs" role="group" aria-label="Compare electricity-supply assumptions">
+        <button type="button" class="energy-tab active" data-energy="conventional" aria-pressed="true"><span class="energy-indicator"></span>Conventional electricity</button>
+        <button type="button" class="energy-tab" data-energy="renewable" aria-pressed="false"><span class="energy-indicator"></span>Renewable electricity</button>
+      </div>
+      <div class="energy-flow" aria-hidden="true">
+        <div class="energy-source"><svg viewBox="0 0 100 100" fill="none"><path class="grid-icon" d="M20 76L38 19H66L83 76M29 58H74M36 39H67M40 20L47 76M60 20L56 76" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path class="renewable-icon" d="M51 82V42M51 42L21 29M51 42L73 16M51 42L82 67M21 29Q15 6 38 17L51 42M73 16Q95 23 72 42L51 42M82 67Q64 92 51 42" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></svg><span>POWER SUPPLY</span></div>
+        <div class="energy-link"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="energy-source factory-source"><svg viewBox="0 0 100 100" fill="none"><path d="M12 80V36L38 52 60 36 85 52V80H12ZM13 80H89M39 81V66H57V81M65 24V48" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><rect x="65" y="12" width="11" height="35" rx="2" fill="currentColor" opacity=".4"/></svg><span>TEXTILE PROCESSING</span></div>
+        <div class="energy-link"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="energy-source"><svg viewBox="0 0 100 100" fill="none"><path d="M27 20H73L82 36L71 88H29L18 36L27 20ZM38 20L41 37M64 20L59 37M29 38H72M38 39L34 81M61 39L66 81" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></svg><span>DENIM SUPPLY CHAIN</span></div>
+      </div>
+      <div class="energy-detail" aria-live="polite">
+        <p class="energy-overline" id="scenario-cue">BASELINE SCENARIO · ELECTRICITY SOURCING</p>
+        <h4 id="scenario-title">Conventional electricity</h4>
+        <p id="scenario-description">Reference scenario: electricity supplied under the conventional sourcing assumption. The model examines how energy inputs and production geography affect the full supply chain.</p>
+        <div class="energy-chips"><span class="energy-chip">Grid electricity</span><span class="energy-chip">Manufacturing energy</span><span class="energy-chip">Supply-chain boundary</span></div>
+      </div>
+      <p class="impact-note"><strong>Research disclosure:</strong> This is an illustrative scenario diagram only. Quantitative LCA results, underlying inventories and unpublished assumptions are intentionally not displayed.</p>
+    </div>
+  </div>
 </section>
 
 <section id="awards" class="section awards-section" aria-labelledby="awards-title">
@@ -237,199 +259,107 @@
 
 <script>
 (function(){
-  const frame = document.getElementById('portrait-neural');
-  const image = document.getElementById('headshot-image');
-  const canvas = document.getElementById('headshot-neural-canvas');
-  if(!frame || !image || !canvas) return;
-
-  const ctx = canvas.getContext('2d');
-  const off = document.createElement('canvas');
-  const offCtx = off.getContext('2d', { willReadFrequently: true });
-  const dpr = Math.max(1, window.devicePixelRatio || 1);
-  let particles = [];
-  let animationFrame = null;
-  let running = false;
-  let active = false;
-  let loaded = false;
-  const pointer = { x: -9999, y: -9999, inside: false };
-
-  const sources = ['assets/images/headshot.jpeg','assets/images/headshot.png','assets/images/headshot.jpg','assets/images/headshot.webp'];
-  let sourceIndex = 0;
-
-  function loadFallbackSource(){
-    if (loaded || sourceIndex >= sources.length - 1) {
-      frame.classList.add('no-headshot');
-      return;
-    }
-    sourceIndex += 1;
-    image.src = sources[sourceIndex];
+  const frame=document.getElementById('portrait-neural');
+  const image=document.getElementById('headshot-image');
+  const canvas=document.getElementById('headshot-neural-canvas');
+  if(!frame||!image||!canvas)return;
+  const ctx=canvas.getContext('2d');
+  const sourceCanvas=document.createElement('canvas');
+  const sourceCtx=sourceCanvas.getContext('2d',{willReadFrequently:true});
+  if(!ctx||!sourceCtx)return;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const sources=['assets/images/headshot.jpeg','assets/images/headshot.png','assets/images/headshot.jpg','assets/images/headshot.webp'];
+  let sourceIndex=0,particles=[],width=0,height=0,active=false,running=false,loaded=false,lastMove=0;
+  const pointer={x:-900,y:-900,inside:false};
+  const ratio=Math.min(2,window.devicePixelRatio||1);
+  function onError(){
+    if(loaded||sourceIndex>=sources.length-1){frame.classList.add('no-headshot');return;}
+    sourceIndex++;image.src=sources[sourceIndex];
   }
-
-  image.addEventListener('error', loadFallbackSource);
-  image.addEventListener('load', () => {
-    loaded = true;
-    frame.classList.remove('no-headshot');
-    resizeAndBuild();
-    renderStill();
-  });
-
-  function coverFit(imgW, imgH, boxW, boxH){
-    const scale = Math.max(boxW / imgW, boxH / imgH);
-    const drawW = imgW * scale;
-    const drawH = imgH * scale;
-    return { x: (boxW - drawW) / 2, y: (boxH - drawH) / 2, width: drawW, height: drawH };
-  }
-
-  function resizeAndBuild(){
-    const rect = frame.getBoundingClientRect();
-    const width = Math.max(1, Math.round(rect.width));
-    const height = Math.max(1, Math.round(rect.height));
-    canvas.width = Math.round(width * dpr);
-    canvas.height = Math.round(height * dpr);
-    canvas.style.width = width + 'px';
-    canvas.style.height = height + 'px';
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    off.width = width;
-    off.height = height;
-    buildParticles(width, height);
-  }
-
-  function buildParticles(width, height){
-    particles = [];
-    if(!loaded || !image.naturalWidth) return;
-    offCtx.clearRect(0,0,width,height);
-    const fit = coverFit(image.naturalWidth, image.naturalHeight, width, height);
-    offCtx.drawImage(image, fit.x, fit.y, fit.width, fit.height);
-    const data = offCtx.getImageData(0,0,width,height).data;
-    const step = width < 360 ? 9 : 10;
-    for(let y=0; y<height; y+=step){
-      for(let x=0; x<width; x+=step){
-        const idx = (y * width + x) * 4;
-        const alpha = data[idx + 3];
-        if(alpha < 70) continue;
-        const r = data[idx], g = data[idx + 1], b = data[idx + 2];
-        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-        if (luminance < 24) continue;
-        particles.push({
-          x, y, baseX: x, baseY: y, vx: 0, vy: 0,
-          size: step < 10 ? 1.55 : 1.8,
-          color: `rgba(${r}, ${g}, ${b}, ${Math.min(0.95, alpha/255)})`
-        });
-      }
-    }
-  }
-
-  function renderStill(){
-    const rect = frame.getBoundingClientRect();
-    ctx.clearRect(0,0,rect.width,rect.height);
-  }
-
-  function drawNetwork(width, height){
-    ctx.clearRect(0,0,width,height);
-    if(!active || !pointer.inside || !particles.length) return;
-    const radius=125;
-    const visible=[];
-    ctx.save();
-    ctx.lineWidth=0.85;
-    for(const p of particles){
-      const dx=p.baseX-pointer.x, dy=p.baseY-pointer.y;
-      const distance=Math.hypot(dx,dy);
-      if(distance > radius+25) continue;
-      const influence=Math.max(0,1-distance/radius);
-      if(influence>0){
-        const angle=Math.atan2(dy,dx);
-        const push=0.65*influence;
-        p.vx+=Math.cos(angle)*push+(-Math.sin(angle))*influence*0.12;
-        p.vy+=Math.sin(angle)*push+(Math.cos(angle))*influence*0.12;
-      }
-      p.vx+=(p.baseX-p.x)*0.05;
-      p.vy+=(p.baseY-p.y)*0.05;
-      p.vx*=0.84; p.vy*=0.84;
-      p.x+=p.vx; p.y+=p.vy;
-      visible.push({p,weight:Math.max(0,1-distance/(radius+25))});
-    }
-    // Only draw short neural connections inside the cursor's active field.
-    for(let i=0;i<visible.length;i++){
-      const a=visible[i].p;
-      for(let j=i+1;j<Math.min(i+12,visible.length);j++){
-        const b=visible[j].p;
-        const d=Math.hypot(a.x-b.x,a.y-b.y);
-        if(d>19)continue;
-        ctx.strokeStyle='rgba(173,251,227,'+(0.25*(1-d/19)*Math.min(visible[i].weight,visible[j].weight)).toFixed(3)+')';
-        ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
-      }
-    }
-    for(const item of visible){
-      const p=item.p;
-      ctx.globalAlpha=Math.min(1,0.22+item.weight*0.9);
-      ctx.fillStyle=p.color;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
-    }
-    ctx.globalAlpha=1;
-    const halo=ctx.createRadialGradient(pointer.x,pointer.y,0,pointer.x,pointer.y,95);
-    halo.addColorStop(0,'rgba(208,252,123,.11)');
-    halo.addColorStop(0.55,'rgba(106,231,224,.055)');
-    halo.addColorStop(1,'rgba(106,231,224,0)');
-    ctx.fillStyle=halo;
-    ctx.beginPath();ctx.arc(pointer.x,pointer.y,95,0,Math.PI*2);ctx.fill();
-    ctx.restore();
-  }
-
-  function animate(){
-    if(!running)return;
+  image.addEventListener('error',onError);
+  function imageReady(){loaded=true;frame.classList.remove('no-headshot');rebuild();}
+  image.addEventListener('load',imageReady);
+  function rebuild(){
+    if(!loaded||!image.naturalWidth)return;
     const rect=frame.getBoundingClientRect();
-    drawNetwork(rect.width,rect.height);
-    if(!active){running=false;animationFrame=null;return;}
-    animationFrame=requestAnimationFrame(animate);
+    width=Math.max(1,Math.round(rect.width));height=Math.max(1,Math.round(rect.height));
+    canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);
+    ctx.setTransform(ratio,0,0,ratio,0,0);
+    sourceCanvas.width=width;sourceCanvas.height=height;
+    sourceCtx.clearRect(0,0,width,height);
+    const scale=Math.max(width/image.naturalWidth,height/image.naturalHeight);
+    const sw=image.naturalWidth*scale,sh=image.naturalHeight*scale;
+    sourceCtx.drawImage(image,(width-sw)/2,(height-sh)/2,sw,sh);
+    const pixels=sourceCtx.getImageData(0,0,width,height).data;
+    const step=width<370?7:7;
+    particles=[];
+    for(let y=0;y<height;y+=step)for(let x=0;x<width;x+=step){
+      const k=(y*width+x)*4;
+      if(pixels[k+3]<40)continue;
+      const red=pixels[k],green=pixels[k+1],blue=pixels[k+2];
+      const tone=red*.2126+green*.7152+blue*.0722;
+      // Colour comes directly from the photograph, not a generic point cloud.
+      particles.push({x,y,homeX:x,homeY:y,vx:0,vy:0,c:'rgba('+red+','+green+','+blue+','+(pixels[k+3]/255).toFixed(3)+')',brightness:tone,size:step-1});
+    }
+    ctx.clearRect(0,0,width,height);
   }
-
-  function start(){
-    if(!loaded) return;
-    if(running) return;
-    running = true;
-    animationFrame = requestAnimationFrame(animate);
+  function paint(){
+    ctx.clearRect(0,0,width,height);
+    const near=[];
+    let moving=0;
+    for(let i=0;i<particles.length;i++){
+      const p=particles[i],dx=p.homeX-pointer.x,dy=p.homeY-pointer.y,dist=Math.hypot(dx,dy);
+      if(active&&pointer.inside&&dist<175){
+        const influence=Math.pow(1-dist/175,1.5);
+        const denom=Math.max(dist,4);
+        const phase=i*1.618;
+        p.vx+=(dx/denom)*influence*3.9+Math.sin(phase)*influence*.26;
+        p.vy+=(dy/denom)*influence*3.9+Math.cos(phase)*influence*.26;
+      }
+      const spring=active?.052:.068;
+      p.vx+=(p.homeX-p.x)*spring;p.vy+=(p.homeY-p.y)*spring;
+      p.vx*=active?.86:.8;p.vy*=active?.86:.8;
+      p.x+=p.vx;p.y+=p.vy;
+      if(Math.abs(p.x-p.homeX)+Math.abs(p.y-p.homeY)>1.2)moving++;
+      ctx.fillStyle=p.c;
+      ctx.fillRect(p.x-p.size/2,p.y-p.size/2,p.size,p.size);
+      if(dist<165&&active&&i%4===0)near.push(p);
+    }
+    if(active&&pointer.inside){
+      ctx.lineWidth=.9;
+      for(let i=0;i<near.length;i++){
+        const a=near[i];
+        for(let j=i+1;j<Math.min(i+7,near.length);j++){
+          const b=near[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+          if(d>32)continue;
+          ctx.strokeStyle='rgba(155,249,221,'+(0.29*(1-d/32)).toFixed(3)+')';
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+        }
+      }
+      const halo=ctx.createRadialGradient(pointer.x,pointer.y,0,pointer.x,pointer.y,120);
+      halo.addColorStop(0,'rgba(209,252,123,.15)');halo.addColorStop(.45,'rgba(114,232,204,.06)');halo.addColorStop(1,'rgba(114,232,204,0)');
+      ctx.fillStyle=halo;ctx.beginPath();ctx.arc(pointer.x,pointer.y,120,0,Math.PI*2);ctx.fill();
+    }
+    if(!active&&moving<10){running=false;ctx.clearRect(0,0,width,height);return;}
+    requestAnimationFrame(paint);
   }
-
-  frame.addEventListener('pointerenter', () => {
-    if(!loaded) return;
-    active = true;
-    pointer.inside = true;
-    frame.classList.add('active');
-    start();
+  function start(){if(running||!loaded||reduced)return;running=true;requestAnimationFrame(paint);}
+  frame.addEventListener('pointerenter',e=>{
+    if(reduced||!loaded||e.pointerType==='touch')return;
+    const r=frame.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.inside=true;active=true;frame.classList.add('active');start();
   });
-
-  frame.addEventListener('pointermove', (event) => {
-    const rect = frame.getBoundingClientRect();
-    pointer.x = event.clientX - rect.left;
-    pointer.y = event.clientY - rect.top;
-    frame.style.setProperty('--neural-x',pointer.x+'px');
-    frame.style.setProperty('--neural-y',pointer.y+'px');
-    pointer.inside = true;
-    active = true;
-    frame.classList.add('active');
-    start();
+  frame.addEventListener('pointermove',e=>{
+    if(reduced||!loaded||e.pointerType==='touch')return;
+    const r=frame.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;
+    pointer.inside=true;active=true;lastMove=performance.now();
+    frame.classList.add('active');start();
   });
-
-  frame.addEventListener('pointerleave', () => {
-    active = false;
-    pointer.inside = false;
-    pointer.x = -9999;
-    pointer.y = -9999;
-    frame.classList.remove('active');
-    start();
+  frame.addEventListener('pointerleave',()=>{
+    active=false;pointer.inside=false;frame.classList.remove('active');start();
   });
-
-  window.addEventListener('resize', () => {
-    if(!loaded) return;
-    resizeAndBuild();
-    if(!active) renderStill();
-  });
-
-  if (image.complete && image.naturalWidth) {
-    loaded = true;
-    resizeAndBuild();
-    renderStill();
-  }
+  if(window.ResizeObserver)new ResizeObserver(rebuild).observe(frame);
+  else window.addEventListener('resize',rebuild);
+  if(image.complete&&image.naturalWidth)imageReady();
 })();
 </script>
 
