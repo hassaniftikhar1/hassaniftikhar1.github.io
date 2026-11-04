@@ -66,3 +66,15 @@
 .project-info p{font-size:13px;line-height:1.85}
 .project-meta{font-size:10px}
 .project-bottom{font-size:11px}
+
+
+/* Visual thumbnails: fixed raster-like illustration area, with reliable fallback to numbered art. */
+.project-art.has-thumbnail{height:195px;position:relative;overflow:hidden;background:#071c29;isolation:isolate}
+.project-art.has-thumbnail::before{display:none}
+.project-art.has-thumbnail::after{content:'';position:absolute;inset:32% 0 0;width:auto;height:auto;border:none;border-radius:0;box-shadow:none;background:linear-gradient(0deg,rgba(4,16,25,.68),transparent);z-index:1;pointer-events:none}
+.project-art.has-thumbnail .project-thumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;transition:transform .55s cubic-bezier(.2,.65,.25,1),filter .4s;filter:saturate(1.03)}
+.project-card:hover .project-thumbnail,.project-card:focus-visible .project-thumbnail{transform:scale(1.07);filter:saturate(1.15)}
+.project-art.has-thumbnail .project-badge,.project-art.has-thumbnail .project-visual-label{z-index:3}
+.project-art.has-thumbnail .project-badge{background:rgba(6,20,30,.78);color:#e0f6e7}
+.project-art.has-thumbnail .project-visual-label{color:#d5f3e4;text-shadow:0 2px 8px #051823;font-size:9px}
+@media(prefers-reduced-motion:reduce){.project-art .project-thumbnail{transition:none!important}}

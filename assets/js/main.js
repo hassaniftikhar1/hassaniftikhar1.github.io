@@ -45,7 +45,21 @@
     art.style.setProperty('--art-top',project.art[0]);
     art.style.setProperty('--art-bottom',project.art[1]);
     art.style.setProperty('--art-glow',project.art[2]);
-    art.append(makeEl('span','project-art-index',String(index+1).padStart(2,'0')),makeEl('span','project-badge',project.label),makeEl('span','project-visual-label','RESEARCH / ENGINEERING'));
+    if(project.thumbnail){
+      art.classList.add('has-thumbnail');
+      const image=makeEl('img','project-thumbnail');
+      image.src=project.thumbnail;image.alt='';image.loading='lazy';image.decoding='async';
+      image.width=960;image.height=540;
+      image.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;';
+      art.append(image);
+      image.addEventListener('error',()=>{
+        art.classList.remove('has-thumbnail');image.remove();
+        art.prepend(makeEl('span','project-art-index',String(index+1).padStart(2,'0')));
+      },{once:true});
+    }else{
+      art.append(makeEl('span','project-art-index',String(index+1).padStart(2,'0')));
+    }
+    art.append(makeEl('span','project-badge',project.label),makeEl('span','project-visual-label','RESEARCH / ENGINEERING'));
     const info=makeEl('div','project-info'),meta=makeEl('div','project-meta');meta.append(makeEl('span','',project.year),makeEl('span','',project.context));
     const title=makeEl('h3','',project.title),desc=makeEl('p','',project.short),bottom=makeEl('div','project-bottom');bottom.append(makeEl('span','',project.tags.slice(0,3).join(' · ')),makeEl('span','','↗'));
     info.append(meta,title,desc,bottom);button.append(art,info);return button;
@@ -69,22 +83,50 @@
   closeDialog.addEventListener('click',dismissModal);dialog.addEventListener('click',event=>{if(event.target===dialog)dismissModal();});dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');if(previousFocus?.isConnected)previousFocus.focus();});
   $('#jump-biodenim').addEventListener('click',()=>{state.category='all';state.search='biodenim';$('#project-search').value='biodenim';$$('.filter-btn').forEach(b=>{const selected=b.dataset.filter==='all';b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));});renderProjects();});
 
-  // Public education-only scenario explorer. No confidential results.
-  const energyScenarios={
-    conventional:{title:'Conventional electricity',cue:'BASELINE ASSUMPTION',source:'Conventional supply assumption',description:'A conventional electricity-sourcing assumption provides the reference scenario for comparing manufacturing-related environmental performance.'},
-    renewable:{title:'Renewable electricity',cue:'RENEWABLE SOURCING ASSUMPTION',source:'Renewable supply assumption',description:'The renewable sourcing scenario explores a change in electricity supply while maintaining the same LCA framework. Quantitative findings remain unpublished.'}
+  // Exact published-manuscript modelled reduction ranges: Bangladesh 21.8–25.6%; India 32.1–36.6%.
+  // Range endpoints vary with the garment-assembly configuration. Conventional electricity is index 100.
+  const climateRoutes={
+    bangladesh:{min:21.8,max:25.6},
+    india:{min:32.1,max:36.6}
   };
-  function setEnergyScenario(key){
-    const v=energyScenarios[key],panel=$('#energy-visual');if(!v||!panel)return;
-    panel.dataset.scenario=key;
-    $('#scenario-title').textContent=v.title;
-    $('#scenario-cue').textContent=v.cue;
-    $('#scenario-description').textContent=v.description;
-    $('#lca-source-label').textContent=v.source;
-    $$('.energy-tab').forEach(button=>{let selected=button.dataset.energy===key;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));});
+  function fmt(n){return Number(n).toFixed(1);}
+  function setEnergyScenario(choice){
+    const renewable=choice==='renewable';
+    const panel=$('#energy-visual');if(!panel)return;
+    panel.dataset.scenario=choice;
+    $$('.energy-tab').forEach(b=>{
+      const selected=b.dataset.energy===choice;
+      b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));
+    });
+    Object.entries(climateRoutes).forEach(([country,values])=>{
+      const bar=$('#'+country+'-bar');
+      const range=$('#'+country+'-range');
+      const label=$('#'+country+'-reduction');
+      const context=$('#'+country+'-context');
+      const index=$('#'+country+'-index');
+      if(renewable){
+        const upper=100-values.min,lower=100-values.max;
+        bar.style.width=fmt(upper)+'%';
+        range.style.left=fmt(lower)+'%';range.style.width=fmt(upper-lower)+'%';
+        range.hidden=false;
+        label.textContent=fmt(values.min)+'–'+fmt(values.max)+'% lower';
+        context.textContent='Renewable-electricity sensitivity';
+        index.textContent='Impact index: '+fmt(lower)+'–'+fmt(upper);
+      }else{
+        bar.style.width='100%';range.style.width='0%';range.hidden=true;
+        label.textContent='100 · reference';
+        context.textContent='Conventional electricity baseline';
+        index.textContent='Impact index: 100';
+      }
+    });
+    $('#scenario-cue').textContent=renewable?'RENEWABLE ELECTRICITY SCENARIO':'CONVENTIONAL ELECTRICITY BASELINE';
+    $('#scenario-title').textContent=renewable?'Up to 36.6% lower modelled climate impact':'Conventional electricity is the reference';
+    $('#scenario-description').textContent=renewable
+      ?'Percentage reductions are relative to each route’s conventional-electricity counterpart. Each country’s range reflects two garment-assembly configurations.'
+      :'Each conventional-electricity route is indexed to 100. Select renewable electricity to see the modelled percentage reduction for Bangladesh- and India-linked routes.';
   }
-  $$('.energy-tab').forEach(button=>button.addEventListener('click',()=>setEnergyScenario(button.dataset.energy)));
-  setEnergyScenario('conventional');
+  $$('.energy-tab').forEach(b=>b.addEventListener('click',()=>setEnergyScenario(b.dataset.energy)));
+  setEnergyScenario('renewable');
 
   // Toast + copy email (works on HTTPS and modern localhost browsers).
   function toast(message){const box=$('#toast');box.textContent=message;box.classList.add('visible');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>box.classList.remove('visible'),3000);}
