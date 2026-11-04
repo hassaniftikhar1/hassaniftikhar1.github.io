@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b111b">
+  <meta name="description" content="Hassan Iftikhar — Materials Engineer and LCA Researcher working at the intersection of life cycle assessment, circular economy, sustainable materials and AI-enabled innovation.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hassan Iftikhar | AI × Circularity × Life Cycle Assessment">
+  <meta property="og:description" content="Where AI meets circular impact. Research, engineering, awards and projects by Hassan Iftikhar.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .portrait-neural-card{display:grid;gap:12px}
+    .portrait-neural-frame{height:405px;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 35%,rgba(72,156,148,.28),rgba(16,29,41,.95) 70%)}
+    .portrait-neural-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(208,252,123,.08),transparent 28%,transparent 72%,rgba(106,231,224,.08));pointer-events:none;z-index:2}
+    .portrait-neural-frame::after{content:'';position:absolute;inset:12px;border:1px solid rgba(208,252,123,.12);border-radius:6px;pointer-events:none;z-index:2}
+    .portrait-neural-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.02) contrast(1.04);transition:opacity .35s ease,transform .45s ease,filter .35s ease}
+    .portrait-neural-frame.active img{opacity:.17;transform:scale(1.03);filter:saturate(1.12) contrast(1.07)}
+    .portrait-neural-frame canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:1}
+    .portrait-neural-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:16px;z-index:3;pointer-events:none}
+    .portrait-neural-labels{display:flex;justify-content:space-between;gap:14px;font-size:9px;letter-spacing:.16em;font-weight:800;color:#d8ece0;text-transform:uppercase}
+    .portrait-neural-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(208,252,123,.2);background:rgba(9,17,24,.35);backdrop-filter:blur(8px);border-radius:999px}
+    .portrait-neural-chip::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+    .portrait-neural-status{display:flex;justify-content:space-between;align-items:end;gap:10px}
+    .portrait-neural-status strong{display:block;font-size:22px;letter-spacing:-.06em;line-height:1.05;color:#f3faf7}
+    .portrait-neural-status span{display:block;font-size:10px;line-height:1.6;color:#c3d7d0;max-width:180px}
+    .portrait-neural-badge{padding:10px 12px;border:1px solid rgba(106,231,224,.22);background:rgba(7,16,27,.55);border-radius:6px;font-size:9px;line-height:1.7;letter-spacing:.12em;color:#b9dad3;text-align:right;text-transform:uppercase}
+    .portrait-helper{margin:0;color:#93a8a7;font-size:11px;line-height:1.7}
+    .portrait-helper strong{color:var(--accent)}
+    .portrait-neural-frame.no-headshot img{display:none}
+    .portrait-neural-fallback{position:absolute;inset:0;display:none;place-items:center;z-index:1;padding:22px;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(57,106,108,.38),rgba(11,17,27,.95) 78%)}
+    .portrait-neural-frame.no-headshot .portrait-neural-fallback{display:grid}
+    .portrait-neural-fallback .initials{font-size:72px;font-weight:800;letter-spacing:-.13em;line-height:1;color:#f2fbf5}
+    .portrait-neural-fallback .initials span{color:var(--accent)}
+    .portrait-neural-fallback p{margin:12px 0 0;font-size:11px;color:#bdd0ca;max-width:250px}
+    @media(max-width:820px){.portrait-neural-frame{height:350px}}
+    @media(max-width:570px){.portrait-neural-frame{height:320px}.portrait-neural-status strong{font-size:18px}.portrait-neural-badge{font-size:8px;padding:8px 10px}}
+  </style>
+
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/experience.js"></script>
+  <title>Hassan Iftikhar — Where AI Meets Circular Impact</title>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<div class="site-shell">
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Hassan Iftikhar, home">
+    <span class="brand-mark">H<span>I</span>.</span>
+    <span class="brand-name">HASSAN IFTIKHAR<small>LCA × AI × CIRCULAR ECONOMY</small></span>
+  </a>
+  <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+    <a href="#about">About</a><a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#impact">LCA Lab</a><a href="#awards">Awards</a><a href="#expertise">Expertise</a><a href="#contact" class="nav-contact">Get in touch <span aria-hidden="true">↗</span></a>
+  </nav>
+  <div class="header-actions"><button type="button" class="icon-btn theme-toggle" aria-label="Switch color theme" title="Switch theme"><span class="theme-icon" aria-hidden="true">☼</span></button><button type="button" class="icon-btn menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button></div>
+</header>
+<main id="main">
+<section id="home" class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="eyebrow hero-eyebrow"><span class="live-dot"></span> MATERIALS ENGINEER · LCA RESEARCHER · CIRCULAR INNOVATOR</p>
+    <div class="hero-signal"><span class="signal-dash"></span> THE FUTURE IS MEASURABLE <span class="signal-counter">001 / ∞</span></div>
+    <h1 id="hero-title">Where <span class="hero-ai">AI</span> meets <em>circular</em> <span class="impact-word">impact<span class="period">.</span></span></h1>
+    <p class="hero-desc">I'm <strong>Hassan Iftikhar</strong>. I connect <strong>life cycle assessment</strong>, materials engineering and data-driven innovation to turn sustainability challenges into evidence-based decisions.</p>
+    <div class="hero-focus">EXPLORING <span class="typing-caret" id="typed-focus">life cycle assessment</span></div>
+    <div class="hero-actions"><a class="button button-primary magnetic" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="button button-secondary magnetic" href="#impact">Enter the LCA lab <span aria-hidden="true">↗</span></a></div>
+    <div class="hero-social"><span>CONNECT /</span><a href="https://www.linkedin.com/in/hassaniftikhar1/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:engr.hassaniftikhar@gmail.com">Email ↗</a><span class="social-location">MADRID, SPAIN</span></div>
+  </div>
+  <div class="hero-visual" id="interactive-visual" aria-label="Interactive AI, materials and circularity network. Move the pointer to explore." role="img">
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+    <div class="visual-corner top-left">DATA IS THE INPUT.<br>IMPACT IS THE OUTPUT.</div>
+    <div class="visual-corner bottom-right">SYSTEMS THINKING<br>↓<br>BETTER DECISIONS</div>
+    <div class="orbit-system" id="orbit-system" aria-hidden="true">
+      <div class="orbit orbit-outer"></div><div class="orbit orbit-mid"></div><div class="orbit orbit-inner"></div>
+      <div class="core-sphere"><span>H<span>I</span>.</span><small>CURIOUS BY DESIGN</small></div>
+      <span class="orbit-label orbit-label-one">AI / DATA</span><span class="orbit-label orbit-label-two">LIFE CYCLE ASSESSMENT</span><span class="orbit-label orbit-label-three">CIRCULAR SYSTEMS</span>
+      <span class="orbit-node node-one"></span><span class="orbit-node node-two"></span><span class="orbit-node node-three"></span>
+    </div>
+    <div class="visual-stamp"><span class="stamp-line"></span><span>MOVE YOUR CURSOR<br>EXPLORE THE CONNECTIONS</span></div>
+  </div>
+  <div class="hero-credentials">
+    <div class="credential"><span class="credential-value" data-count="19" data-suffix="/20">19<span class="credential-soft">/20</span></span><span class="credential-label">AMIR M1 academic result · NOVA FCT</span></div>
+    <div class="credential"><span class="credential-value">1st<span class="credential-soft"> / 52</span></span><span class="credential-label">GIKI Materials Engineering · Gold Medal</span></div>
+    <div class="credential"><span class="credential-value">15<span class="credential-soft"> projects</span></span><span class="credential-label">Research, modelling and applied engineering</span></div>
+    <div class="credential"><span class="credential-value">4<span class="credential-soft"> countries</span></span><span class="credential-label">Academic experience across Pakistan & Europe</span></div>
+  </div>
+</section>
+
+<section id="about" class="section about-section" aria-labelledby="about-title">
+  <div class="section-top"><span class="section-number">01 / ABOUT ME</span><span class="section-rule"></span><span class="section-aside">THE PERSON BEHIND THE RESEARCH</span></div>
+  <div class="about-layout">
+    <div class="about-main"><p class="eyebrow">SCIENCE WITH PURPOSE</p><h2 id="about-title">Sustainability isn't a slogan.<br><span>It's a system to improve.</span></h2>
+      <p class="large-copy">I work at the intersection of life cycle assessment, circular materials, engineering research and computational analysis.</p>
+      <p>My path spans industrial operations at <strong>AkzoNobel</strong>, sustainable materials research at <strong>CERMAV–CNRS</strong>, and comparative environmental assessment at <strong>NOVA FCT</strong>. I am currently pursuing the EIT RawMaterials <strong>AMIR master’s</strong> across Portugal and Spain, with a focus on urban mining, recycling and construction materials.</p>
+      <p>I am particularly interested in how AI-assisted analysis and transparent LCA can support resource recovery and lower-impact material choices. My early-stage innovation concept, Terralynq, explores that intersection; I distinguish planned capabilities from validated results.</p>
+      <a href="#journey" class="text-link">Explore my journey <span aria-hidden="true">↗</span></a>
+      <div class="about-pill-row"><span>LIFE CYCLE THINKING</span><span>DESIGN FOR CIRCULARITY</span><span>EVIDENCE OVER ASSUMPTIONS</span></div>
+    </div>
+    <aside class="about-side"><div class="portrait-neural-card"><div class="portrait-neural-frame" id="portrait-neural" aria-label="Interactive portrait of Hassan Iftikhar. Move the cursor over the photo to separate it into a neuron-like pixel network."><img id="headshot-image" src="assets/images/headshot.png" alt="Portrait of Hassan Iftikhar"><canvas id="headshot-neural-canvas" aria-hidden="true"></canvas><div class="portrait-neural-fallback" aria-hidden="true"><div><div class="initials">H<span>I</span>.</div><p>Add your headshot to <strong>assets/images/</strong> and name it <strong>headshot.png</strong>, <strong>headshot.jpg</strong>, <strong>headshot.jpeg</strong> or <strong>headshot.webp</strong>.</p></div></div><div class="portrait-neural-overlay"><div class="portrait-neural-labels"><span class="portrait-neural-chip">Neural Portrait</span><span>Move cursor / Pixel disassembly</span></div><div class="portrait-neural-status"><div><strong>Hassan Iftikhar</strong><span>AI × LCA × Circular systems — an interactive headshot experience.</span></div><div class="portrait-neural-badge">Hover to activate<br>networked particles</div></div></div></div><p class="portrait-helper" id="portrait-helper"><strong>Hover over the portrait</strong> to pull its pixels into a neuron-like network that separates and reconnects around your cursor.</p></div><div class="location-card"><span class="location-dot"></span><div><strong>Based in Madrid, Spain</strong><span>Studying at Universidad Politécnica de Madrid</span></div><span class="location-arrow">↗</span></div></aside>
+  </div>
+</section>
+
+<section id="journey" class="section journey-section" aria-labelledby="journey-title">
+  <div class="section-top"><span class="section-number">02 / THE JOURNEY</span><span class="section-rule"></span><span class="section-aside">FROM INDUSTRY TO INTERDISCIPLINARY RESEARCH</span></div>
+  <div class="section-heading"><div><p class="eyebrow">ROOTED IN ENGINEERING, GROWING THROUGH RESEARCH</p><h2 id="journey-title">A global journey.<br><span>One common purpose.</span></h2></div><p>Academic excellence, scientific curiosity and industry experience form the foundation of how I approach sustainability.</p></div>
+  <div class="journey-tabs" role="tablist" aria-label="Experience and education"><button type="button" id="tab-education" class="journey-tab active" role="tab" aria-controls="panel-education" aria-selected="true" data-journey="education">Education <span>03</span></button><button type="button" id="tab-experience" class="journey-tab" role="tab" aria-controls="panel-experience" aria-selected="false" data-journey="experience">Experience <span>05</span></button></div>
+  <div class="journey-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
+    <article class="timeline-entry"><div class="timeline-date">2025 — 2027 <span>IN PROGRESS</span></div><div class="timeline-content"><div class="entry-top"><h3>AMIR Master — Advanced Materials: Innovative Recycling</h3><span class="timeline-tag">EIT RAWMATERIALS SCHOLAR</span></div><p class="timeline-school">NOVA FCT, Portugal → Universidad Politécnica de Madrid, Spain</p><p>Urban mining, recycling technology, circular building materials and sustainability assessment. Completed first year with an academic result of approximately 19/20; second-year studies at UPM in progress.</p><div class="tag-row"><span>Life Cycle Assessment</span><span>Circular Economy</span><span>Materials Recycling</span></div></div></article>
+    <article class="timeline-entry"><div class="timeline-date">2024 — 2025 <span>FRANCE</span></div><div class="timeline-content"><div class="entry-top"><h3>Master 1 — Materials Science for Sustainability & AI</h3><span class="timeline-tag">MENTION TRÈS BIEN</span></div><p class="timeline-school">Grenoble INP – Phelma / Université Grenoble Alpes</p><p>One-year master-level studies in materials science, characterisation, numerical modelling and sustainability. Completed with Mention Très Bien (16/20).</p><div class="tag-row"><span>Materials Modelling</span><span>Scientific Computing</span><span>Characterisation</span></div></div></article>
+    <article class="timeline-entry"><div class="timeline-date">2018 — 2022 <span>PAKISTAN</span></div><div class="timeline-content"><div class="entry-top"><h3>Bachelor's — Materials Science & Engineering</h3><span class="timeline-tag">GOLD MEDALIST</span></div><p class="timeline-school">Ghulam Ishaq Khan Institute (GIKI)</p><p>Nanotechnology focus. Graduated first in a cohort of 52, CGPA 3.72/4.00, with six semesters on the Dean's Honor List. Researched advanced nanocomposites for electrochemical energy storage.</p><div class="tag-row"><span>Nanomaterials</span><span>Electrochemistry</span><span>1st / 52</span></div></div></article>
+  </div>
+  <div class="journey-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" hidden>
+    <article class="timeline-entry"><div class="timeline-date">JAN 2026 — NOW <span>PORTUGAL</span></div><div class="timeline-content"><div class="entry-top"><h3>Life Cycle Assessment Lead / Sustainability Researcher</h3><span class="timeline-tag">RESEARCH</span></div><p class="timeline-school">BioMatFab / NOVA FCT · BioDenim</p><p>Building process inventories and environmental-impact models for bio-based textile dyeing and global denim supply chains; translating geography, renewables and manufacturing scenarios into decision-ready evidence.</p><div class="tag-row"><span>openLCA</span><span>ecoinvent 3.12</span><span>ReCiPe 2016</span></div></div></article>
+    <article class="timeline-entry"><div class="timeline-date">2024 <span>FRANCE</span></div><div class="timeline-content"><div class="entry-top"><h3>Sustainable Materials Research Intern</h3><span class="timeline-tag">CNRS</span></div><p class="timeline-school">CERMAV–CNRS · Grenoble</p><p>Investigated cellulose nanocrystal surface functionalisation, interfacial chemistry and dispersion in apolar media, including TEMPO oxidation and colloidal behaviour.</p></div></article>
+    <article class="timeline-entry"><div class="timeline-date">2022 — 2024 <span>PAKISTAN</span></div><div class="timeline-content"><div class="entry-top"><h3>Graduate Engineering Trainee / Quality Control Supervisor</h3><span class="timeline-tag">INDUSTRY</span></div><p class="timeline-school">AkzoNobel · Lahore</p><p>Manufacturing quality systems, process KPIs, SOPs and continuous improvement. Applied Lean Six Sigma/DMAIC methods with reported improvements in Right-First-Time performance and cycle time.</p><div class="tag-row"><span>Lean Six Sigma</span><span>Power BI</span><span>SAP ECC</span></div></div></article>
+    <article class="timeline-entry"><div class="timeline-date">2021 — 2022 <span>PAKISTAN</span></div><div class="timeline-content"><div class="entry-top"><h3>Undergraduate Research — Energy Storage Nanomaterials</h3><span class="timeline-tag">RESEARCH</span></div><p class="timeline-school">GIKI</p><p>Synthesised and characterised Ni–Co–Mn MOF/MXene/CNT materials for electrochemical charge storage; investigated electrode performance using CV, GCD and EIS.</p></div></article>
+    <article class="timeline-entry"><div class="timeline-date">2021 <span>PAKISTAN</span></div><div class="timeline-content"><div class="entry-top"><h3>Industrial Engineering Trainee</h3><span class="timeline-tag">TRAINING</span></div><p class="timeline-school">Qadri Group</p><p>Practical industrial exposure to automation, instrumentation, Siemens PLC systems and foundry operations.</p></div></article>
+  </div>
+</section>
+
+<section id="projects" class="section projects-section" aria-labelledby="projects-title">
+  <div class="section-top"><span class="section-number">03 / WORK ARCHIVE</span><span class="section-rule"></span><span class="section-aside">CLICK ANY PROJECT TO EXPLORE</span></div>
+  <div class="section-heading"><div><p class="eyebrow">RESEARCH × INDUSTRY × INNOVATION</p><h2 id="projects-title">Projects that <span>connect the dots.</span></h2></div><p>From denim supply-chain LCA and circular ceramics to supercapacitors, energy optimisation and computational materials science.</p></div>
+  <div class="project-controls"><div class="filter-list" role="group" aria-label="Filter projects"><button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter-btn" data-filter="lca" aria-pressed="false">LCA</button><button type="button" class="filter-btn" data-filter="circular" aria-pressed="false">Circular economy</button><button type="button" class="filter-btn" data-filter="materials" aria-pressed="false">Materials</button><button type="button" class="filter-btn" data-filter="energy" aria-pressed="false">Energy</button><button type="button" class="filter-btn" data-filter="digital" aria-pressed="false">AI & data</button><button type="button" class="filter-btn" data-filter="industry" aria-pressed="false">Industry</button></div><label class="search-field"><span class="search-glyph" aria-hidden="true">⌕</span><input type="search" id="project-search" placeholder="Search work..." aria-label="Search projects"></label></div>
+  <div class="projects-meta"><span id="project-count">SHOWING 15 OF 15 PROJECTS</span><span>VISUALS ARE ARTISTIC PLACEHOLDERS — IMAGES COMING LATER</span></div>
+  <div id="project-grid" class="project-grid" aria-live="polite"></div><p class="project-empty" id="project-empty" hidden>No projects match these filters. Try another search.</p>
+</section>
+
+<section id="impact" class="section impact-section" aria-labelledby="impact-title">
+  <div class="section-top"><span class="section-number">04 / INTERACTIVE LCA LAB</span><span class="section-rule"></span><span class="section-aside">REAL MODELS · TRANSPARENT BOUNDARIES</span></div>
+  <div class="impact-layout"><div class="impact-intro"><p class="eyebrow">THE SCIENCE OF BETTER DECISIONS</p><h2 id="impact-title">Impact is more than a <span>buzzword.</span></h2><p>Explore a snapshot of my BioDenim research. Switch the system boundary to see how modelled climate impacts change for alternative denim pathways with assembly in Portugal.</p><p>The values are scenario-specific LCA outputs, not certified product claims. Results depend on defined boundaries, datasets, supply-chain geography and inventory assumptions.</p><a href="#projects" id="jump-biodenim" class="text-link">See BioDenim in my projects <span aria-hidden="true">↗</span></a><div class="method-tags"><span>ISO 14040/14044</span><span>openLCA</span><span>ecoinvent 3.12</span><span>ReCiPe 2016</span></div></div>
+    <div class="impact-card"><div class="impact-card-head"><div><p class="card-kicker">BIO-DERIVED VS CONVENTIONAL PATHWAY</p><h3>Climate impact per pair of jeans</h3></div><span class="mini-icon" aria-hidden="true">↗</span></div>
+      <div class="metric-switch" role="group" aria-label="Select system boundary"><button type="button" class="metric-btn active" data-boundary="fabric" aria-pressed="true">Fabric + PT assembly</button><button type="button" class="metric-btn" data-boundary="full" aria-pressed="false">Full product · PT assembly</button></div>
+      <div class="bar-row"><div class="bar-copy"><strong>BioDenim pathway</strong><span id="bio-value">8.61 kg CO₂-eq</span></div><div class="bar-track"><div id="bio-bar" class="bar-fill bar-bio" style="width:68.9%"></div></div></div>
+      <div class="bar-row"><div class="bar-copy"><strong>Conventional comparator</strong><span id="conventional-value">11.25 kg CO₂-eq</span></div><div class="bar-track"><div id="conventional-bar" class="bar-fill bar-conventional" style="width:90%"></div></div></div>
+      <div class="impact-result"><span>RELATIVE CLIMATE IMPACT REDUCTION IN THIS SCENARIO</span><strong id="difference-value">23.5% lower</strong></div>
+      <p class="impact-note">Functional unit: one pair of jeans at the company gate. Same geographical assembly setting; change only the displayed system-boundary definition. Figures are research model outputs and require project context for interpretation.</p>
+    </div></div>
+</section>
+
+<section id="awards" class="section awards-section" aria-labelledby="awards-title">
+ <div class="section-top"><span class="section-number">05 / RECOGNITION</span><span class="section-rule"></span><span class="section-aside">ACHIEVEMENTS AND RESEARCH COMMUNICATION</span></div>
+ <div class="section-heading"><div><p class="eyebrow">MILESTONES THAT MATTER</p><h2 id="awards-title">The work. <span>The recognition.</span></h2></div><p>Academic distinctions, scholarships, teamwork and opportunities to communicate engineering and environmental research.</p></div>
+ <div class="awards-grid">
+  <article class="award-card award-featured"><span class="award-icon">✳</span><span class="award-year">2026–27 / INDUSTRY & ACADEMIA</span><h3>Saint-Gobain MUEC Award</h3><p>Member of the winning UPM team for “Circular Economy of Chromium Oxide,” presented at Saint-Gobain Madrid.</p><div class="award-footer"><span>WINNING TEAM</span><span>↗</span></div></article>
+  <article class="award-card award-featured"><span class="award-icon">✦</span><span class="award-year">2022 / GIKI</span><h3>Materials Engineering Gold Medal</h3><p>Graduated first in the cohort, ranked 1st of 52, with CGPA 3.72/4.00.</p><div class="award-footer"><span>CLASS RANK 01 / 52</span><span>↗</span></div></article>
+  <article class="award-card"><span class="award-icon">◇</span><span class="award-year">2025–2027 / EUROPE</span><h3>EIT RawMaterials AMIR Scholarship</h3><p>Scholarship support for the Advanced Materials: Innovative Recycling master’s programme.</p><div class="award-footer"><span>SCHOLARSHIP</span><span>↗</span></div></article>
+  <article class="award-card"><span class="award-icon">✳</span><span class="award-year">2026 / NOVA FCT</span><h3>First-Year Academic Distinction</h3><p>Completed the first 60 ECTS of AMIR with an overall result of approximately 19/20.</p><div class="award-footer"><span>19 / 20</span><span>↗</span></div></article>
+  <article class="award-card"><span class="award-icon">✦</span><span class="award-year">2025 / GRENOBLE INP</span><h3>Mention Très Bien</h3><p>Completed Materials Science for Sustainability & AI Master 1 with Mention Très Bien (16/20).</p><div class="award-footer"><span>ACADEMIC HONOURS</span><span>↗</span></div></article>
+  <article class="award-card"><span class="award-icon">◇</span><span class="award-year">2022 / GIKI</span><h3>Open House / Industrial Expo — First Place</h3><p>Undergraduate project recognition for Ni–Co–Mn MOF/MXene/CNT energy-storage research.</p><div class="award-footer"><span>PROJECT RECOGNITION</span><span>↗</span></div></article>
+  <article class="award-card"><span class="award-icon">✳</span><span class="award-year">2018–2022 / GIKI</span><h3>Dean's Honor List</h3><p>Six semesters of academic recognition during the bachelor's degree.</p><div class="award-footer"><span>SIX SEMESTERS</span><span>↗</span></div></article>
+  <article class="award-card"><span class="award-icon">✦</span><span class="award-year">2021–2022 / INTERNATIONAL</span><h3>GIKI Representative at Dubai Expo</h3><p>Selected to represent the university at Expo 2020 Dubai, an international engagement opportunity.</p><div class="award-footer"><span>UNIVERSITY SELECTION</span><span>↗</span></div></article>
+ </div>
+ <div class="conference-strip"><div class="conference-symbol">GCPC<br>2026</div><div><p class="eyebrow">SCIENTIFIC COMMUNICATION · SITGES, SPAIN</p><h3>Global Cleaner Production Conference 2026</h3><p>Poster P3.46 — “Where should denim be assembled? Decarbonisation and social trade-offs in global jeans supply chains.”</p></div><a href="#impact">Explore the underlying LCA ↗</a></div>
+</section>
+
+<section id="expertise" class="section expertise-section" aria-labelledby="expertise-title">
+ <div class="section-top"><span class="section-number">06 / MY TOOLKIT</span><span class="section-rule"></span><span class="section-aside">METHODS, TECHNOLOGIES & COMMUNITIES</span></div>
+ <div class="section-heading"><div><p class="eyebrow">THE SKILLS BEHIND THE SCIENCE</p><h2 id="expertise-title">A cross-disciplinary <span>toolkit.</span></h2></div><p>A blend of quantitative sustainability methods, materials research, scientific computing and process improvement.</p></div>
+ <div class="skills-grid">
+  <div class="skill-group"><div class="skill-number">01 / SUSTAINABILITY</div><h3>Life Cycle Assessment & Circularity</h3><div class="skill-tags"><span>openLCA</span><span>ecoinvent 3.12</span><span>ReCiPe 2016</span><span>ISO 14040/14044</span><span>Life Cycle Inventory</span><span>Comparative Scenarios</span><span>Environmental Hotspots</span><span>Recycling</span><span>Brightway2 concepts (introductory)</span></div></div>
+  <div class="skill-group"><div class="skill-number">02 / DIGITAL METHODS</div><h3>Data, Simulation & AI Interests</h3><div class="skill-tags"><span>Python</span><span>MATLAB</span><span>Power BI</span><span>Excel</span><span>Monte Carlo Modelling</span><span>Finite-Element Methods</span><span>ANSYS / COMSOL exposure</span><span>SQL fundamentals</span><span>AI-assisted sustainability (concept-stage)</span></div></div>
+  <div class="skill-group"><div class="skill-number">03 / LABORATORY</div><h3>Materials & Electrochemistry</h3><div class="skill-tags"><span>XRD</span><span>SEM / EDS</span><span>TEM</span><span>CV</span><span>GCD</span><span>EIS</span><span>Nanocomposite Synthesis</span><span>Colloidal Dispersion</span><span>Thin Films</span><span>Corrosion Analysis</span></div></div>
+  <div class="skill-group"><div class="skill-number">04 / INDUSTRY</div><h3>Operations & Engineering</h3><div class="skill-tags"><span>Lean Six Sigma / DMAIC</span><span>OEE</span><span>Quality Systems</span><span>SOPs</span><span>SAP ECC</span><span>Process KPIs</span><span>Root-Cause Analysis</span><span>Safety Reviews</span><span>Technical Documentation</span></div></div>
+ </div>
+ <div class="leadership-area"><div><p class="eyebrow">BEYOND THE LAB</p><h3>Learning and leading together.</h3></div><div class="leadership-list"><span>Campus Director · Hult Prize, GIKI (2020–21)</span><span>Director of Technology · IET GIKI</span><span>Student leadership · SPIE chapter</span><span>Student leadership · ASHRAE chapter</span><span>International research collaboration across Europe</span><span>Science communication and peer engagement</span></div></div>
+</section>
+
+<section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="contact-ornament" aria-hidden="true">HI.</div><div class="contact-inner"><p class="eyebrow"><span class="live-dot"></span> OPEN TO RESEARCH & SUSTAINABILITY CONVERSATIONS</p><h2 id="contact-title">Let's make the next<br>idea <em>matter</em><span>.</span></h2><p>Whether you’re working on LCA, AI-assisted sustainability, industrial decarbonisation or circular materials, I’d be glad to connect.</p><div class="contact-actions"><a class="button button-primary magnetic" href="mailto:engr.hassaniftikhar@gmail.com?subject=Hello%20Hassan%20%E2%80%94%20research%20collaboration">Send a message <span aria-hidden="true">↗</span></a><a class="button button-outline-light magnetic" href="https://www.linkedin.com/in/hassaniftikhar1/" target="_blank" rel="noopener noreferrer">Find me on LinkedIn <span aria-hidden="true">↗</span></a><button type="button" class="button button-outline-light" id="copy-email">Copy email <span aria-hidden="true">⧉</span></button></div><div class="contact-address">MADRID, SPAIN <span>·</span> <a href="mailto:engr.hassaniftikhar@gmail.com">engr.hassaniftikhar@gmail.com</a></div></div></section>
+</main>
+<footer class="site-footer"><a href="#home" class="footer-brand" aria-label="Back to home">H<span>I</span>.</a><p>Science × Systems × Circularity. Designed for GitHub Pages.</p><a href="#home">BACK TO TOP ↑</a><span>© <span id="current-year">2026</span> HASSAN IFTIKHAR</span></footer>
+</div>
+<dialog id="project-dialog" class="project-dialog" aria-labelledby="modal-title"><div class="dialog-inner"><div class="dialog-top"><span class="eyebrow" id="modal-category">PROJECT</span><button class="dialog-close" type="button" aria-label="Close project details">✕</button></div><div class="dialog-art" id="modal-art"><span id="modal-index">01</span><div class="art-rings" aria-hidden="true"></div></div><div class="dialog-content"><span class="modal-meta" id="modal-meta">2026</span><h2 id="modal-title">Project</h2><p class="modal-summary" id="modal-summary"></p><div id="modal-sections"></div><div class="tag-row" id="modal-tags"></div></div></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  const frame = document.getElementById('portrait-neural');
+  const image = document.getElementById('headshot-image');
+  const canvas = document.getElementById('headshot-neural-canvas');
+  const helper = document.getElementById('portrait-helper');
+  if(!frame || !image || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const off = document.createElement('canvas');
+  const offCtx = off.getContext('2d', { willReadFrequently: true });
+  const dpr = Math.max(1, window.devicePixelRatio || 1);
+  let particles = [];
+  let animationFrame = null;
+  let running = false;
+  let active = false;
+  let loaded = false;
+  const pointer = { x: -9999, y: -9999, inside: false };
+
+  const sources = ['assets/images/headshot.png','assets/images/headshot.jpg','assets/images/headshot.jpeg','assets/images/headshot.webp'];
+  let sourceIndex = 0;
+
+  function loadFallbackSource(){
+    if (loaded || sourceIndex >= sources.length - 1) {
+      frame.classList.add('no-headshot');
+      helper.innerHTML = 'I could not find your headshot file. Put your photo in <strong>assets/images/</strong> as <strong>headshot.png</strong>, <strong>headshot.jpg</strong>, <strong>headshot.jpeg</strong> or <strong>headshot.webp</strong>.';
+      return;
+    }
+    sourceIndex += 1;
+    image.src = sources[sourceIndex];
+  }
+
+  image.addEventListener('error', loadFallbackSource);
+  image.addEventListener('load', () => {
+    loaded = true;
+    frame.classList.remove('no-headshot');
+    resizeAndBuild();
+    renderStill();
+  });
+
+  function coverFit(imgW, imgH, boxW, boxH){
+    const scale = Math.max(boxW / imgW, boxH / imgH);
+    const drawW = imgW * scale;
+    const drawH = imgH * scale;
+    return { x: (boxW - drawW) / 2, y: (boxH - drawH) / 2, width: drawW, height: drawH };
+  }
+
+  function resizeAndBuild(){
+    const rect = frame.getBoundingClientRect();
+    const width = Math.max(1, Math.round(rect.width));
+    const height = Math.max(1, Math.round(rect.height));
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    off.width = width;
+    off.height = height;
+    buildParticles(width, height);
+  }
+
+  function buildParticles(width, height){
+    particles = [];
+    if(!loaded || !image.naturalWidth) return;
+    offCtx.clearRect(0,0,width,height);
+    const fit = coverFit(image.naturalWidth, image.naturalHeight, width, height);
+    offCtx.drawImage(image, fit.x, fit.y, fit.width, fit.height);
+    const data = offCtx.getImageData(0,0,width,height).data;
+    const step = width < 360 ? 7 : 6;
+    for(let y=0; y<height; y+=step){
+      for(let x=0; x<width; x+=step){
+        const idx = (y * width + x) * 4;
+        const alpha = data[idx + 3];
+        if(alpha < 70) continue;
+        const r = data[idx], g = data[idx + 1], b = data[idx + 2];
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        if (luminance < 24) continue;
+        particles.push({
+          x, y, baseX: x, baseY: y, vx: 0, vy: 0,
+          size: step < 7 ? 1.2 : 1.4,
+          color: `rgba(${r}, ${g}, ${b}, ${Math.min(0.95, alpha/255)})`
+        });
+      }
+    }
+  }
+
+  function renderStill(){
+    const rect = frame.getBoundingClientRect();
+    ctx.clearRect(0,0,rect.width,rect.height);
+  }
+
+  function drawNetwork(width, height){
+    ctx.clearRect(0,0,width,height);
+    if(!particles.length) return;
+    ctx.save();
+    ctx.lineWidth = 0.75;
+    for(let i=0; i<particles.length; i++){
+      const p = particles[i];
+      const dx = pointer.x - p.x;
+      const dy = pointer.y - p.y;
+      const dist = Math.hypot(dx, dy);
+      const radius = 88;
+      if(active && pointer.inside && dist < radius){
+        const force = (1 - dist / radius) * 1.75;
+        const angle = Math.atan2(dy, dx);
+        p.vx -= Math.cos(angle) * force * 1.25;
+        p.vy -= Math.sin(angle) * force * 1.25;
+      }
+      const spring = active ? 0.042 : 0.06;
+      p.vx += (p.baseX - p.x) * spring;
+      p.vy += (p.baseY - p.y) * spring;
+      p.vx *= active ? 0.88 : 0.82;
+      p.vy *= active ? 0.88 : 0.82;
+      p.x += p.vx;
+      p.y += p.vy;
+    }
+
+    for(let i=0; i<particles.length; i++){
+      const p = particles[i];
+      for(let j=i+1; j<Math.min(i+10, particles.length); j++){
+        const q = particles[j];
+        const dx = p.x - q.x;
+        const dy = p.y - q.y;
+        const dist = Math.hypot(dx, dy);
+        const maxDist = active ? 20 : 11;
+        if(dist < maxDist){
+          const alpha = (1 - dist / maxDist) * (active ? 0.24 : 0.08);
+          ctx.strokeStyle = `rgba(187, 244, 221, ${alpha})`;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    for(const p of particles){
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
+      ctx.fill();
+    }
+    if(active && pointer.inside){
+      const gradient = ctx.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, 72);
+      gradient.addColorStop(0, 'rgba(208,252,123,0.18)');
+      gradient.addColorStop(0.45, 'rgba(106,231,224,0.08)');
+      gradient.addColorStop(1, 'rgba(106,231,224,0)');
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(pointer.x, pointer.y, 72, 0, Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  function animate(){
+    if(!running) return;
+    const rect = frame.getBoundingClientRect();
+    drawNetwork(rect.width, rect.height);
+    if(!active){
+      const settled = particles.every(p => Math.abs(p.x - p.baseX) < 0.35 && Math.abs(p.y - p.baseY) < 0.35 && Math.abs(p.vx) < 0.05 && Math.abs(p.vy) < 0.05);
+      if(settled){
+        running = false;
+        renderStill();
+        animationFrame = null;
+        return;
+      }
+    }
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  function start(){
+    if(!loaded) return;
+    if(running) return;
+    running = true;
+    animationFrame = requestAnimationFrame(animate);
+  }
+
+  frame.addEventListener('pointerenter', () => {
+    if(!loaded) return;
+    active = true;
+    pointer.inside = true;
+    frame.classList.add('active');
+    start();
+  });
+
+  frame.addEventListener('pointermove', (event) => {
+    const rect = frame.getBoundingClientRect();
+    pointer.x = event.clientX - rect.left;
+    pointer.y = event.clientY - rect.top;
+    pointer.inside = true;
+    active = true;
+    frame.classList.add('active');
+    start();
+  });
+
+  frame.addEventListener('pointerleave', () => {
+    active = false;
+    pointer.inside = false;
+    pointer.x = -9999;
+    pointer.y = -9999;
+    frame.classList.remove('active');
+    start();
+  });
+
+  window.addEventListener('resize', () => {
+    if(!loaded) return;
+    resizeAndBuild();
+    if(!active) renderStill();
+  });
+
+  if (image.complete && image.naturalWidth) {
+    loaded = true;
+    resizeAndBuild();
+    renderStill();
+  }
+})();
+</script>
+
+</body>
+</html>
